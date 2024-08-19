@@ -1,0 +1,1127 @@
+	$(function() {
+		function isValidEmail (email)
+		{
+			return (/^([a-z0-9_\-]+\.)*[a-z0-9_\-]+@([a-z0-9][a-z0-9\-]*[a-z0-9]\.)+[a-z]{2,4}$/i).test(email);
+		}
+
+		$('.numic').keypress(function(b) {
+			var C = /[0-9]/;
+			var a = b.which;
+			var c = String.fromCharCode(a);
+			return !!(a==0||a==8||a==9||a==13||c.match(C));
+	 		});
+		$('.numic_tochka').keypress(function(b) {
+			var C = /[0-9\x2E]/;
+			var a = b.which;
+			var c = String.fromCharCode(a);
+			return !!(a==0||a==8||a==9||a==13||c.match(C));
+		});
+		$('.numic_tel').keypress(function(b) {
+			var C = /[0-9\x2E\x2D\x2B\x28\x29]/;
+			var a = b.which;
+			var c = String.fromCharCode(a);
+			return !!(a==0||a==8||a==9||a==13||c.match(C));
+		});
+
+		$("a[rel=example_group], a.fancy, a#example3, a#example6, #various1, #various2, #various3, #various4, #various5").fancybox({
+				helpers : {
+					thumbs : true
+				},
+                openEffect  : 'elastic',
+				closeEffect : 'elastic',
+				nextEffect  : 'elastic',
+				prevEffect  : 'elastic'
+			}
+        );
+        $("a.fancy2").fancybox({
+            autoSize: true,
+            scrolling: 'no',
+            openEffect  : 'fade',
+            closeEffect : 'fade'
+        });
+
+		function hid(hid)
+		{if(document.getElementById(hid).style.display == 'none')    {document.getElementById(hid).style.display = 'block'; document.getElementById('pm'+hid).src = '/images/minus.gif';}
+		else  {document.getElementById(hid).style.display = 'none'; document.getElementById('pm'+hid).src = '/images/plus.gif';}}
+
+	$(".podcatalog0").click(function(){
+		var path = $(this).attr("path");
+		var obj = $(".podcatalog1[path^='"+path+"']");
+		if(obj.length)
+		{
+			obj.toggle();
+			return false;
+		}
+	});
+
+
+	$.datepicker.regional['ru'] = {
+		closeText: 'Закрыть',
+		prevText: '&#x3c;Пред',
+		nextText: 'След&#x3e;',
+		currentText: 'Сегодня',
+		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+		'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+		'Июл','Авг','Сен','Окт','Ноя','Дек'],
+		dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+		dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+		dateFormat: 'dd.mm.yy',
+		firstDay: 1,
+		isRTL: false,
+		minDate: "0",
+		maxDate: "+2m"
+	};
+	$.datepicker.setDefaults($.datepicker.regional['ru']);
+	$('#dayotgruzka').datepicker({});
+
+    $('.content').jscroll({
+      //autoTriggerUntil: 20,
+      loadingHtml: '<img src="/images/loading.gif" alt="Загрузка" /> Загрузка...',
+      nextSelector: 'a.jscroll-next:last',
+    });
+
+
+    if($('.custom-autoload').length) {
+        $('.custom-autoload').each(function () {
+            let customAutoload = new CustomAutoload();
+            customAutoload.register($(this), '.jscroll-next');
+        });
+
+    } else {
+        $('.front').jscroll({
+            //autoTriggerUntil: 20,
+            loadingHtml: '<img src="/images/loading.gif" alt="Загрузка" /> Загрузка...',
+            nextSelector: 'a.jscroll-next:last',
+        });
+    }
+
+
+
+    $("#scroll-to-top").illBeBack({left:'10'});
+    $("#bsearch").click(function(){
+      if($(".poisk_pole").val() == "Поиск среди 40000 товаров и 4000 коллекций") $(".poisk_pole").val("");
+    });
+
+    $("#rekvizity").live('change', function (event) {
+        $("#rekvizity").attr("file_loaded", "");
+
+        if(document.querySelector('#rekvizity').files[0].size > 1024*1024) {
+            $("#rekvizity_error").text("Размер файла превышает 1Мб").show();
+            return;
+        }
+
+        $("#rekvizity_error").hide();
+        if($(this).val() == '') //нажата отмена
+        {
+            $("#rekvizity").attr("file_loaded", "");
+        }
+
+        $("#rekvizity_loading").show();
+        $("#rekvizity").hide();
+        var data = new FormData();
+        data.append('image', this.files[0]);
+        $.ajax({
+            url: '/rekvizity_upload',
+            type: 'POST',
+            data: data,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                if(data != '') {
+                    $("#rekvizity_loading").hide();
+                    if(data == 'razmer') {
+                        $("#rekvizity").attr("file_loaded", "");
+                        $("#rekvizity_error").text("Размер файла превышает 1Мб").show();
+                        $("#rekvizity").replaceWith($('#rekvizity').get(0).outerHTML);
+                        $("#rekvizity").show();
+                    } else if(data == 'extension') {
+                        $("#rekvizity").attr("file_loaded", "");
+                        $("#rekvizity_error").text("Недопустимый тип файла").show();
+                        $("#rekvizity").replaceWith($('#rekvizity').get(0).outerHTML);
+                        $("#rekvizity").show();
+                    } else {
+                        $("#rekvizity").show();
+                        $("#rekvizity").attr("file_loaded", data);
+                    }
+                }
+            }
+        });
+    });
+
+    /**
+     * Отправка заказа
+     */
+    let cartProcessing = false;
+    $(".cart_send").click(function(){
+        if(cartProcessing) {
+            return;
+        }
+
+        cartProcessing = true;
+
+	    var plitkas = $.cookie('cart');
+        var dostavka = $("#dostavka_select").val();
+
+		$('.error').hide();
+		var error = 0;
+        var offseterr = $('.cart_oform').offset().top;
+		var persona = $("#persona").val();
+		if (persona == '') { $("#persona_error").text("Вы не заполнили поле ФИО"); $("#persona_error").show(); error = 1;  };
+		var phone = $("#phone").val();
+		if((phone == '')||(phone == "+7 ")) { $("#phone_error").text("Вы не заполнили поле Телефон"); $("#phone_error").show(); error = 1; };
+        var email = $("#email").val();
+		if (email == '') {$("#email_error").text("Вы не заполнили поле E-mail"); $("#email_error").show(); error = 1; }
+        else if(!isValidEmail(email)) { $("#email_error").text("Пожалуйста, укажите корректный E-mail"); $("#email_error").show(); error = 1; };
+		if (dostavka == '' || dostavka == 'Не выбрано') {
+			$("#otgruzka_error").text("Вы не выбрали способ отгрузки"); $("#otgruzka_error").show();
+			if (error==0) offseterr = $('#dostavka_select').offset().top; error = 1;
+		}
+		if ($("#div_oplata").css("display") != 'none')
+		{
+			var oplata = $("#oplata_select").val();
+			if (oplata == '' || oplata == 'Не выбрано') {
+				$("#oplata_error").text("Вы не выбрали способ оплаты");
+				$("#oplata_error").show();
+				if (error==0) offseterr = $('#oplata_select').offset().top; error = 1;
+			}
+		}
+		if ($("#div_tk").css("display") != 'none')
+		{
+			var tk = $("#tk_select").val();
+			if (tk == '' || tk == 'Не выбрано') {
+				$("#tk_error").text("Вы не заполнили поле Транспортная компания");
+				$("#tk_error").show();
+				if (error==0) offseterr = $('#tk_select').offset().top; error = 1;
+			}
+		}
+		if ($("#div_adres").css("display") != 'none')
+		{
+			var adres = $("#adres").val();
+			if (adres == '') {
+				$("#adres_error").text("Вы не заполнили поле Адрес");
+				$("#adres_error").show();
+				if (error==0) offseterr = $('#adres').offset().top; error = 1;
+			}
+		}
+		if ($("#div_lift").css("display") != 'none')
+		{
+			var lift = -1;
+			if ($("#lift_ulica").prop("checked")) lift = 2;
+			if ($("#lift_da").prop("checked")) lift = 1;
+			if ($("#lift_net").prop("checked")) lift = 0;
+			if (lift == -1) {
+				$("#lift_error").text("Выберите есть лифт или нет");
+				$("#lift_error").show();
+				if (error==0) offseterr = $('#div_lift').offset().top; error = 1;
+			}
+		}
+		if ($("#div_dayotgruzka").css("display") != 'none')
+		{
+			var dayotgruzka = $("#dayotgruzka").val();
+			/*if (dayotgruzka == '') {
+				$("#dayotgruzka_error").text("Укажите дату");
+				$("#dayotgruzka_error").show();
+				if (error==0) offseterr = $('#div_dayotgruzka').offset().top; error = 1;
+			}*/
+		}
+		if (error)
+		{
+			$('html, body').animate({ scrollTop:  offseterr-30 }, 1000 );
+            cartProcessing = false;
+			return false;
+		}
+
+		var emailcopy = 0;
+		if($("#emailcopy").attr("checked")) emailcopy = 1;
+
+		var dop_info = $("#dop_info").val();
+        var rekvizity = '';
+        var tk = $("#tk_select").val();
+		var lico1 = $(".lico:checked").val();
+		if ($("#rekvizity").attr("file_loaded") != "") rekvizity = $("#rekvizity").attr("file_loaded");
+        $.post("/orderadd", {
+                plitkas:plitkas,
+                lico1:lico1,
+                persona:persona,
+                phone:phone,
+                email:email,
+                emailcopy:emailcopy,
+                dostavka:dostavka,
+                adres:adres,
+                oplata_tip:oplata,
+                dop:dayotgruzka,
+                podem:lift,
+                dop_info:dop_info,
+                rekvizity:rekvizity,
+                tk:tk
+            },
+            function(data) {
+                if($.isNumeric(data)) {
+					$(".korzina").html('<h1>Корзина</h1><div class="cart_end"><div class="cart_end_icon"><img src="/images/green.png" /></div><div class="cart_end_text">Ваш заказ принят.<br/ >После обработки заказа с Вами свяжутся наши сотрудники.<br/ >Номер вашего заказа <strong>№'+data+'</strong>. Спасибо.</div></div>');
+					$('body, html').animate({scrollTop: 0}, 1000);
+					$.cookie('cart', "");
+					$.cookie('cartall',"");
+					$(".basket_text").text("0");
+					$(".cart_delall").css("display","block");
+				} else {
+                    alert("Произошла неизвестная ошибка - "+data+", обратитесь к менеджерам по телефону");
+                }
+            }
+        );
+        return false;
+	});
+
+	$(".cart_add").live("click",function(){
+        let id = $(this).attr("name");
+        let price = $(this).attr("price");
+        let kolvo = parseFloat($("#kolvo"+id).val());
+        //if (isNaN(kolvo)) kolvo = parseInt($("#kolvo_sht"+id).val());
+
+
+		let kolvo_sht = parseInt($("#kolvo_sht"+id).val()); //значение в поле
+		let step = parseFloat($("#kolvo"+id).attr("kolvo_step")); //количественный шаг в м2
+		let step_sht = parseInt($("#kolvo"+id).attr("kolvo_step_sht")); //количественный шаг в шт
+		let upakovka_m2 = parseFloat($("#kolvo"+id).attr("upakovka_m2")); //сколько метров в упаковке
+		let upakovka_sht = parseInt($("#kolvo"+id).attr("upakovka_sht")); //сколько штук в упаковке
+        let sht;
+        const usingBox     = parseInt($(`#kolvo_pole_box${id}`).attr('po_upakovkam')); //сколько штук в упаковке
+
+        if (step_sht>1) //если упаковками
+		{
+			sht = Math.round(kolvo / (upakovka_m2/upakovka_sht));
+		}
+		else
+		{
+			if (isNaN(kolvo)) kolvo = kolvo_sht;
+			sht = Math.ceil(kolvo / step);
+		}
+
+		var added = '';
+        let kol = 0;
+        let summa = 0;
+        var cartCookie = $.cookie('cart');
+        if(!cartCookie) cartCookie = '';
+        if(cartCookie)
+        {
+            let cartArray = cartCookie.split("|");
+            for (var key in cartArray) {
+                let plitkaInfo = cartArray[key].split("-");
+                if(plitkaInfo[0] == id)
+                {
+					kolvo = (parseFloat(plitkaInfo[2]) + kolvo);
+					x = Math.round(kolvo/step); //x - количество "шагов"
+					if ((x % upakovka_sht == 0) && (!isNaN(upakovka_m2)))
+					{
+//						alert(x+'*'+upakovka_m2+'/'+upakovka_sht);
+						kolvo = Math.round(step*x*1000)/1000;
+//						kolvo = Math.round(x* upakovka_m2/upakovka_sht  *1000)/1000
+					}
+					else
+					{
+						kolvo = Math.round(step*x*1000)/1000;
+//						alert(step+'*'+x);
+					}
+
+
+
+                    plitkaInfo[2] = kolvo;
+                    added = 'yes'; //уже был добавлен ранее
+                }
+                kol += 1;//parseInt(plitkaInfo[2]);
+    	        summa += Math.round(plitkaInfo[1]*plitkaInfo[2]);
+                cartArray[key] = plitkaInfo.join("-");
+            }
+            cartCookie = cartArray.join("|");
+        }
+
+        if(!added) //если товар в корзине новый
+        {
+            if(cartCookie) cartCookie += '|';
+            cartCookie += id+"-"+price+"-"+kolvo;
+            kol += 1;//parseInt(kolvo);
+            summa += Math.round(price*kolvo);
+        }
+        $.cookie('cart', cartCookie, { expires: 30, path: '/'});
+        $.cookie('cartall',kol+"|"+summa, { expires: 30, path: '/'});
+
+		$("#kvmetr"+id).text(kolvo);
+		if (isNaN(upakovka_m2))
+		{
+			sht = kolvo;
+		}
+		else
+		{
+			sht = Math.round(kolvo/step)*step_sht;
+		}
+		$("#shtuk"+id).text(sht);
+
+
+        if(usingBox) {
+            $("#cart_boxes"+id).text(Math.ceil(sht / upakovka_sht));
+        } else {
+            $("#cart_boxes"+id).text(Number((sht / upakovka_sht).toFixed(3)));
+        }
+
+
+		$("#cart_add_button"+id).hide();
+		$("#cart_added_div"+id).show();
+
+		$(".basket_text").html(""+kol+"");
+        $(".cart_delall").css("display","block");
+		return false;
+	});
+
+	$(".cart_add_div_show").click(function(){
+		id = $(this).attr("name");
+        $("#cart_added_div"+id).hide();
+		$("#cart_add_button"+id).show();
+		return false;
+	});
+
+	function min5000(){
+        if($('#dostavka_select').val() != 'самовывоз Конструктор' && $('#dostavka_select').val() != 'самовывоз Славянский Мир') {
+            $("#div_oplata_sam5000").hide();
+            return;
+        }
+
+        if($('#oplata_select').val() == 'Наличными в пункте самовывоза' && parseInt($("#summacart").text()) < 20000) {
+            $("#oplata_text").html("В случае оплаты наличными, в пункт самовывоза нужно будет приезжать <strong>два раза</strong>. Первый для оплаты, второй после поступления заказа.")
+        } else {
+            $("#oplata_text").html("");
+        }
+
+        if(parseInt($("#summacart").text()) < 20000) {
+            $("#div_oplata").show();
+            $("#div_oplata_sam5000").show();
+            $("#oplata_select option[value='Наличными в пункте самовывоза']").show();
+            // $("#oplata_select option[value='Банковский счёт']").hide();
+
+            if($("#oplata_select").val() == 'Банковский счёт') {
+                $("#oplata_select").val("Не выбрано").change();
+            }
+        }
+        else {
+            $("#div_oplata_sam5000").hide();
+        }
+	}
+
+
+	$(".cart_del").click(function(){
+        //if (!confirm("Вы действительно хотите удалить этот товар из корзины?")) return false;
+        id = $(this).attr("name");
+
+        kol = 0;
+        summa = 0;
+
+        var cartCookie = $.cookie('cart');
+        if(!cartCookie) cartCookie = '';
+        if(cartCookie)
+        {
+            cartArray = cartCookie.split("|");
+            for (var key in cartArray)
+            {
+                plitkaInfo = cartArray[key].split("-");
+                if(plitkaInfo[0] == id)
+                {
+                    cartArray.splice(key,1);
+                    $("#plitka"+id).fadeOut(400);
+                    break;
+                }
+            }
+
+            for (var key in cartArray)
+            {
+                plitkaInfo = cartArray[key].split("-");
+                kol += 1;//parseInt(plitkaInfo[2]);
+    	        summa += Math.round(plitkaInfo[1]*plitkaInfo[2]);
+            }
+            cartCookie = cartArray.join("|");
+        }
+
+        $.cookie('cart', cartCookie,{ expires: 30, path: '/'});
+        $.cookie('cartall',kol+"|"+summa,{ expires: 30, path: '/'});
+
+        $(".basket_text").html(""+kol+"");
+		if (!kol)
+        {
+            $(".basket_text").text("0");
+			$(".cart_delall").css("display","block");
+
+            $(".korzina").html("<h1>Корзина</h1><p>Ваша корзина пуста.</p>");
+        }
+
+        $("#plitkaovcart").text(kol);
+        $("#summacart").text(summa+'');
+        min5000();
+        return false;
+	});
+
+    function calcBasket(productId, startingPoint) {
+        let volume     = parseFloat($(`#cart_kolvo${productId}`).val()); //количество в м2
+        let count      = parseInt($(`#cart_kolvo_sht${productId}`).val()); //значение в поле
+        let boxes      = parseFloat($(`#cart_kolvo_box${productId}`).val()); //значение в поле
+        let stepVolume = parseFloat($(`#cart_kolvo${productId}`).attr('kolvo_step')); //количественный шаг в м2
+        let stepCount  = parseInt($(`#cart_kolvo${productId}`).attr('kolvo_step_sht')); //количественный шаг в шт
+        let boxLength  = parseFloat($(`#cart_kolvo${productId}`).attr("upakovka_m2")); //сколько метров в упаковке
+        let countInBox = parseInt($(`#cart_kolvo${productId}`).attr("upakovka_sht")); //сколько штук в упаковке
+        const usingBox = parseInt($(`#kolvo_pole_box${productId}`).attr('po_upakovkam')); //сколько штук в упаковке
+
+        let newVolume = 0;
+        let newCount = 0;
+        let newBoxes = 0;
+
+
+        if(startingPoint == 'volume') { // Изменен объем
+            if(volume == '') {
+                volume = stepVolume;
+            }
+
+            if(stepCount > 1) { //если упаковками
+                newCount = Math.round(volume / (boxLength / countInBox));
+            } else {
+                //kolvo = kolvo_sht;
+                newCount = Math.ceil(volume / stepVolume);
+            }
+
+            if(usingBox) {
+                newBoxes = Math.ceil(newCount / countInBox);
+            } else {
+                newBoxes = Number((newCount / countInBox).toFixed(3));
+            }
+
+            $(`#cart_kolvo_sht${productId}`).val(newCount);
+            $(`#cart_kolvo_box${productId}`).val(newBoxes);
+            $(`#cart_kolvo_sht${productId}`).blur();
+
+        } else if(startingPoint == 'count') {
+            let kol = 0; //количество общее
+            let summa = 0; //сумма общая
+
+            if (count<=0 || isNaN(count)) {
+                count = 1;
+            }
+
+            if(stepCount > 1) {
+                let x = Math.ceil(count / stepCount); //количество сейчас в долях
+                count = stepCount * x; //"округляем" в большую сторону
+                newVolume = Math.round((count / stepCount) * boxLength * 1000) / 1000; //значение в метрах
+            } else {
+                newVolume = Math.round(count * stepVolume * 1000) / 1000;
+            }
+
+
+            //Набралась упаковка
+            if((count % countInBox == 0) && (!isNaN(boxLength))) {
+                newVolume = Math.round(count / countInBox * boxLength * 1000) / 1000
+            }
+
+
+            if(usingBox) {
+                newBoxes = Math.ceil(count / countInBox);
+            } else {
+                newBoxes = Number((count / countInBox).toFixed(3));
+            }
+
+
+            $(`#cart_kolvo${productId}`).val(newVolume);
+            $(`#cart_kolvo_box${productId}`).val(newBoxes);
+            $(this).val(count);
+
+
+            let cartCookie = $.cookie('cart'); //читаем куку
+            if(!cartCookie) cartCookie = '';
+            if(cartCookie) {
+                let cartArray = cartCookie.split("|"); //Разделяем и перебираем все товары в куке
+                for(var key in cartArray) {
+                    plitkaInfo = cartArray[key].split("-"); //Разделяем товар по ID[0],Kolvo[1],Price[2]
+                    if(plitkaInfo[0] == productId) //Когда товар найден в куке
+                    {
+                        plitkaInfo[2] = newVolume;
+                        $("#price" + productId).text(Math.round(parseFloat(newVolume) * parseFloat(plitkaInfo[1])) + ""); //Обновляем цену
+                    }
+                    kol += 1;//в общее количество 1 позиция, а не много //parseFloat(plitkaInfo[2]);
+                    summa += Math.round(plitkaInfo[1] * plitkaInfo[2]);
+                    cartArray[key] = plitkaInfo.join("-");
+                }
+                cartCookie = cartArray.join("|");
+            }
+            $.cookie('cart', cartCookie, {expires: 30, path: '/'});
+            $.cookie('cartall', kol + "|" + summa, {expires: 30, path: '/'});
+
+
+            $(".basket_text").html(`${kol}`);
+            $("#plitkaovcart").text(kol);
+            $("#summacart").text(`${summa}`);
+
+        } else if(startingPoint == 'box') {
+            newBoxes = boxes;
+
+            if(usingBox) {
+                newBoxes = Math.ceil(newBoxes);
+            }
+            newCount = Math.ceil(newBoxes * countInBox);
+
+            if(newCount % stepCount != 0) {
+                newCount += stepCount - newCount % stepCount;
+            }
+
+            if(usingBox) {
+                newBoxes = Math.ceil(newCount / countInBox);
+            } else {
+                newBoxes = Number((newCount / countInBox).toFixed(3));
+            }
+
+
+            if(stepCount > 1) {
+                const x = Math.ceil(newCount / stepCount); //количество сейчас в долях
+                count = stepCount * x; //"округляем" в большую сторону
+                newVolume = Math.round((newCount / stepCount) * boxLength * 1000) / 1000; //значение в метрах
+            } else {
+                newVolume = Math.round(newCount * stepVolume * 1000) / 1000;
+            }
+
+            //Набралась упаковка
+            if(count % countInBox == 0) {
+                newVolume = Math.round(newCount / countInBox * boxLength * 1000) / 1000;
+            }
+
+            $(`#cart_kolvo${productId}`).val(newVolume);
+            $(`#cart_kolvo_sht${productId}`).val(newCount);
+            $(`#cart_kolvo_box${productId}`).val(newBoxes);
+            $(`#cart_kolvo_sht${productId}`).blur();
+        }
+
+        min5000();
+    }
+
+    $(".cart_kolvo").blur(function(){
+        const productId = $(this).attr("name");
+        calcBasket.apply(this, [productId, 'volume']);
+	});
+
+    $(".cart_kolvo_sht").blur(function(){
+        const productId = $(this).attr("name");
+        calcBasket.apply(this, [productId, 'count']);
+	});
+
+    $(".cart_kolvo_box").blur(function(){
+        const productId = $(this).attr("name");
+        calcBasket.apply(this, [productId, 'box']);
+	});
+
+	$(".cart_minus1").click(function(){
+		const id = $(this).attr("name");
+		const kolvo = parseFloat($("#cart_kolvo"+id).val()); //количество в м2
+		const kolvo_sht = parseInt($("#cart_kolvo_sht"+id).val()); //значение в поле
+		const step = parseFloat($("#cart_kolvo"+id).attr("kolvo_step")); //количественный шаг в м2
+		const step_sht = parseInt($("#cart_kolvo"+id).attr("kolvo_step_sht")); //количественный шаг в шт
+
+		/*kolvopole = $("tr#plitka"+id+" .cart_kolvo");
+		kol = kolvopole.val();
+		if(kol > step)
+		{
+			kolvopole.val(parseFloat(kol)-parseFloat(step));
+			kolvopole.blur();
+		}*/
+
+
+
+		$("#cart_kolvo_sht"+id).val(kolvo_sht-step_sht);
+		$("#cart_kolvo_sht"+id).blur();
+        calcBasket(id, 'count');
+        $("#oplata_select").trigger('change');
+	});
+
+	$(".cart_plus1").click(function(){
+		const id = $(this).attr("name");
+		const kolvo = parseFloat($(`#cart_kolvo${id}`).val()); //количество в м2
+		const kolvo_sht = parseInt($(`#cart_kolvo_sht${id}`).val()); //значение в поле
+		const step = parseFloat($(`#cart_kolvo${id}`).attr('kolvo_step')); //количественный шаг в м2
+		const step_sht = parseInt($(`#cart_kolvo${id}`).attr('kolvo_step_sht')); //количественный шаг в шт
+
+/*		kolvopole = $("tr#plitka"+id+" .cart_kolvo");
+		kol = parseFloat(kolvopole.val())+parseFloat(step);
+		maxlength = kolvopole.attr("maxlength");
+		if(parseFloat(maxlength) > 0)
+		{
+			if(kol < 20000)
+				kolvopole.val(kol);
+		}
+		else kolvopole.val(kol);
+		kolvopole.blur();
+*/
+
+		$(`#cart_kolvo_sht${id}`).val(parseInt(kolvo_sht)+parseInt(step_sht));
+		$(`#cart_kolvo_sht${id}`).blur();
+        calcBasket(id, 'count');
+        $("#oplata_select").trigger('change');
+	});
+
+
+    $(".cart_delall").live("click", function(){
+        if (!confirm("Вы действительно хотите удалить все товары из корзины?")) return false;
+        $.cookie('cart', null, {path:'/'});
+        $.cookie('cartall', null, {path:'/'});
+
+        $(".basket_text").html("0");
+		$(".cart_delall").css("display","block");
+        if($("#korzina"))
+        {
+        $("#korzina").html("<p>Ваша корзина пуста.</p>");
+        $("#plitkaovcart").text(kol);
+        $("#summacart").text(summa);
+        };
+        return false;
+	});
+
+    $("#r_fiz").click(function(){
+        $(".korzina_yur").hide();
+    });
+
+    $("#r_yur").click(function(){
+        $(".korzina_yur").show();
+	});
+
+    $(".kolvo_pole").live("change",function(){
+        $(".podskazka_okruglenie").attr("showed","show");
+    });
+    $(".kolvo_pole_sht").live("change",function(){
+        $(".podskazka_okruglenie").attr("showed","show");
+    });
+
+    function calcProductBasket(productId, startingPoint) {
+        let volume         = parseFloat($(`#kolvo${productId}`).val()); //количество в м2
+        let count          = parseInt($(`#kolvo_sht${productId}`).val()); //значение в поле
+        let boxes          = parseFloat($(`#kolvo_box${productId}`).val()); //значение в поле
+        const stepVolume   = parseFloat($(`#kolvo${productId}`).attr('kolvo_step')); //количественный шаг в м2
+        const stepCount    = parseInt($(`#kolvo${productId}`).attr('kolvo_step_sht')); //количественный шаг в шт
+        const boxLength    = parseFloat($(`#kolvo${productId}`).attr('upakovka_m2')); //сколько метров в упаковке
+        const countInBox   = parseInt($(`#kolvo${productId}`).attr('upakovka_sht')); //сколько штук в упаковке
+        const usingBox     = parseInt($(`#kolvo_pole_box${productId}`).attr('po_upakovkam')); //сколько штук в упаковке
+
+        let newCount = 0;
+        let newBoxes = 0;
+        let newVolume = 0;
+
+        if(startingPoint == 'volume') { // Изменен объем
+            //когда округляем
+            if(volume == '') {
+                volume = stepVolume;
+            }
+
+
+            if(stepCount > 1) { //если упаковками
+                newCount = Math.round(volume / (boxLength / countInBox));
+            } else {
+                newCount = Math.ceil(volume / stepVolume);
+            }
+
+            if(usingBox) {
+                newBoxes = Math.ceil(newCount / countInBox);
+            } else {
+                newBoxes = Number((newCount / countInBox).toFixed(3));
+            }
+
+            $(`#kolvo_sht${productId}`).val(newCount);
+            $(`#kolvo_box${productId}`).val(newBoxes);
+            $(`#kolvo_sht${productId}`).blur();
+
+        } else if(startingPoint == 'count') {
+            if(count <= 0 || isNaN(count)) {
+                count = 1;
+            }
+
+            if(stepCount > 1) {
+                const x = Math.ceil(count / stepCount); //количество сейчас в долях
+                const oldCount = count;
+                const oldVolume = volume;
+                count = stepCount * x; //"округляем" в большую сторону
+                newVolume = Math.round((count / stepCount) * boxLength * 1000) / 1000; //значение в метрах
+                const mleft = $(this).offset().left - 117;
+                const mtop = $(this).offset().top + 23;
+                if(oldCount != count && oldVolume != volume) {
+                    if($(".podskazka_okruglenie").attr("showed") == "show") { //если был change именно с поля
+                        $(".podskazka_okruglenie span").text(stepCount + " шт. или " + stepVolume + " кв.м.");
+                        $(".podskazka_okruglenie").offset({top: mtop, left: mleft}).show();
+                    }
+                }
+            } else {
+                newVolume = Math.round(count * stepVolume * 1000) / 1000;
+            }
+
+            //Набралась упаковка
+            if(count % countInBox == 0) {
+                newVolume = Math.round(count / countInBox * boxLength * 1000) / 1000;
+            }
+
+            if(usingBox) {
+                newBoxes = Math.ceil(count / countInBox);
+            } else {
+                newBoxes = Number((count / countInBox).toFixed(3));
+            }
+
+            $(`#kolvo${productId}`).val(newVolume);
+            $(`#kolvo_box${productId}`).val(newBoxes);
+            $(this).val(count);
+
+        } else if(startingPoint == 'box') {
+            newBoxes = boxes;
+
+            if(usingBox) {
+                newBoxes = Math.ceil(newBoxes);
+            }
+            newCount = Math.ceil(newBoxes * countInBox);
+
+            if(newCount % stepCount != 0) {
+                newCount += stepCount - newCount % stepCount;
+            }
+
+            if(usingBox) {
+                newBoxes = Math.ceil(newCount / countInBox);
+            } else {
+                newBoxes = Number((newCount / countInBox).toFixed(3));
+            }
+
+
+            if(stepCount > 1) {
+                const x = Math.ceil(newCount / stepCount); //количество сейчас в долях
+                count = stepCount * x; //"округляем" в большую сторону
+                newVolume = Math.round((newCount / stepCount) * boxLength * 1000) / 1000; //значение в метрах
+            } else {
+                newVolume = Math.round(newCount * stepVolume * 1000) / 1000;
+            }
+
+            //Набралась упаковка
+            if(count % countInBox == 0) {
+                newVolume = Math.round(newCount / countInBox * boxLength * 1000) / 1000;
+            }
+
+            $(`#kolvo${productId}`).val(newVolume);
+            $(`#kolvo_sht${productId}`).val(newCount);
+            $(`#kolvo_box${productId}`).val(newBoxes);
+            $(`#kolvo_sht${productId}`).blur();
+        }
+    }
+
+    $(".kolvo_pole").live("blur",function(){ //обновление при ручном изменении
+        const productId = $(this).attr("name");
+        calcProductBasket.apply(this, [productId, 'volume']);
+	});
+
+	$(".kolvo_pole_sht").live("blur",function(){ //обновление при ручном изменении штук
+        const productId = $(this).attr("name");
+        calcProductBasket.apply(this, [productId, 'count']);
+	});
+
+	$(".kolvo_pole_box").live("blur",function(){ //обновление при ручном изменении штук
+        const productId = $(this).attr("name");
+        calcProductBasket.apply(this, [productId, 'box']);
+	});
+
+	$(".kolvo_minus1").live("click",function(){
+		id = $(this).attr("name");
+		kolvo = parseFloat($("#kolvo"+id).val()); //количество в м2
+		kolvo_sht = parseInt($("#kolvo_sht"+id).val()); //значение в поле
+		step = parseFloat($("#kolvo"+id).attr("kolvo_step")); //количественный шаг в м2
+		step_sht = parseInt($("#kolvo"+id).attr("kolvo_step_sht")); //количественный шаг в шт
+        $(".podskazka_okruglenie").removeAttr("showed");
+		$("#kolvo_sht"+id).val(kolvo_sht-step_sht);
+		$("#kolvo_sht"+id).blur();
+	});
+
+	$(".kolvo_plus1").live("click",function(){
+		id = $(this).attr("name");
+		kolvo = parseFloat($("#kolvo"+id).val()); //количество в м2
+		kolvo_sht = parseInt($("#kolvo_sht"+id).val()); //значение в поле
+		step = parseFloat($("#kolvo"+id).attr("kolvo_step")); //количественный шаг в м2
+		step_sht = parseInt($("#kolvo"+id).attr("kolvo_step_sht")); //количественный шаг в шт
+        $(".podskazka_okruglenie").removeAttr("showed");
+		$("#kolvo_sht"+id).val(parseInt(kolvo_sht)+parseInt(step_sht));
+		$("#kolvo_sht"+id).blur();
+	});
+
+    $(".podskazka_okruglenie").click(function(){
+      $(this).css("visibility","hidden").css("width","100px");
+    });
+
+    $("#dostavka_select").val("Не выбрано").change();
+	$("#dostavka_select").change(function(){
+	    $(this).parent().find(".error").hide();
+        $("#div_dayotgruzka").hide();
+		$("#div_oplata").hide();
+		$("#div_adres").hide();
+		$("#div_razgruzka").hide();
+		$("#div_lift").hide();
+		//$("#div_etazh").hide();
+        $("#region_text").hide();
+        $("#mkad_text").hide();
+        $("#zamkad_text").hide();
+        $("#div_tk").hide();
+		//$("#div_kmotmkada").hide();
+		$("#oplata_select option").show();
+		$("#tk_select").val("").change();
+
+		if($(this).val() == 'самовывоз Конструктор' || $(this).val() == 'самовывоз Славянский Мир')
+		{
+			$("#div_dayotgruzka .day_otgr").text("День самовывоза");
+			$("#div_dayotgruzka").show();
+			min5000();
+
+            $("#oplata_select option").remove();
+            $("#div_oplata").show();
+            selectValues = { "Не выбрано": "Не выбрано", "Наличными в пункте самовывоза": "Наличными в пункте самовывоза","Перевод на банковскую карту":"Перевод на банковскую карту","Банковский счёт":"Банковский счёт"};
+            $.each(selectValues, function(key, value) {
+              $('#oplata_select').append($("<option></option>")
+                    .attr("value",key)
+                    .text(value));
+            });
+            $("#oplata_select").val("Не выбрано").change();
+			if($("#oplata_select").val() == 'Наличными в пункте самовывоза' && parseInt($("#summacart").text()) < 20000) {
+			    $("#oplata_text").html("В случае оплаты наличными, в пункт самовывоза нужно будет приезжать <strong>два раза</strong>. Первый для оплаты, второй после поступления заказа.")
+            } else if($("#oplata_select").val() == 'Перевод на банковскую карту') {
+			    $("#oplata_text").html("Номер карты <strong>Сбербанка</strong> для внесения оплаты Вам сообщит менеджер после обработки заказа.")
+            } else {
+			    $("#oplata_text").html("");
+            }
+		}
+		else $("#oplata_text").html("");
+
+		if($(this).val() == 'в пределах МКАД')
+		{
+			$("#div_dayotgruzka .day_otgr").text("День доставки");
+			$("#div_adres").show();
+			$("#mkad_text").show();
+			$("#div_dayotgruzka").show();
+			$("#div_razgruzka").show();
+			$("#razgruzka").removeAttr("checked");
+			$(".lift").removeAttr("checked");
+			$("#lift_da").attr("checked","checked");
+			$("#div_etazh").hide();
+		    $("#div_oplata").show();
+            $("#div_oplata_sam5000").hide();
+		    
+            $("#oplata_select option").remove();
+            selectValues = { "Не выбрано": "Не выбрано", "Наличными при получении": "Наличными при получении","Перевод на банковскую карту":"Перевод на банковскую карту","Банковский счёт":"Банковский счёт"};
+            $.each(selectValues, function(key, value) {
+              $('#oplata_select').append($("<option></option>")
+                    .attr("value",key)
+                    .text(value));
+            });
+            $("#oplata_select").val("Не выбрано").change();
+			//if($("#oplata_select").val() == 'Наличными в пункте самовывоза') $("#oplata_text").html("В случае оплаты наличными, в пункт самовывоза нужно будет приезжать <strong>два раза</strong>. Первый для оплаты, второй после поступления заказа.")
+			//else if($("#oplata_select").val() == 'Перевод на банковскую карту') $("#oplata_text").html("Номер карты <strong>Сбербанка</strong> для внесения оплаты Вам сообщит менеджер после обработки заказа.")
+			$("#oplata_text").html("");
+		}
+		if($(this).val() == 'за пределы МКАД')
+		{
+			$("#div_dayotgruzka .day_otgr").text("День доставки");
+			$("#div_adres").show();
+			$("#zamkad_text").show();
+			$("#div_dayotgruzka").show();
+			$("#div_razgruzka").show();
+			$("#razgruzka").removeAttr("checked");
+			$(".lift").removeAttr("checked");
+			$("#lift_da").attr("checked","checked");
+			$("#div_etazh").hide();
+		    $("#div_oplata").show();
+            $("#div_oplata_sam5000").hide();
+		    
+            $("#oplata_select option").remove();
+            selectValues = { "Не выбрано": "Не выбрано", "Наличными при получении": "Наличными при получении","Перевод на банковскую карту":"Перевод на банковскую карту","Банковский счёт":"Банковский счёт"};
+            $.each(selectValues, function(key, value) {
+              $('#oplata_select').append($("<option></option>")
+                    .attr("value",key)
+                    .text(value));
+            });
+            $("#oplata_select").val("Не выбрано").change();
+			//if($("#oplata_select").val() == 'Наличными в пункте самовывоза') $("#oplata_text").html("В случае оплаты наличными, в пункт самовывоза нужно будет приезжать <strong>два раза</strong>. Первый для оплаты, второй после поступления заказа.")
+			//else if($("#oplata_select").val() == 'Перевод на банковскую карту') $("#oplata_text").html("Номер карты <strong>Сбербанка</strong> для внесения оплаты Вам сообщит менеджер после обработки заказа.")
+			$("#oplata_text").html("");
+		}
+		if($(this).val() == 'в регион')
+		{
+            $("#div_adres").show();
+			$("#region_text").show();
+		    $("#div_tk").show();
+		    $("#tk_text").text("");
+
+		    $("#div_oplata_sam5000").hide();
+            $("#oplata_select option").remove();
+            selectValues = { "Не выбрано": "Не выбрано", "Банковский счёт":"Банковский счёт","Перевод на банковскую карту":"Перевод на банковскую карту" };
+            $.each(selectValues, function(key, value) {
+              $('#oplata_select').append($("<option></option>")
+                    .attr("value",key)
+                    .text(value));
+            });
+            $("#oplata_select").val("Не выбрано").change();
+			$("#div_oplata").show();
+		}
+        if($('#lico_yur').is(':checked')) //если выбрано юр лицо
+        {
+            $("#div_oplata").hide();
+			$("#div_oplata_sam5000").hide();
+    		$("#div_razgruzka").hide();
+            $("#region_text").hide();
+            $("#mkad_text").hide();
+            $("#zamkad_text").hide();
+        }
+	});
+
+	// Выбор способа оплаты
+	$("#oplata_select").change(function(){
+        $(this).parent().find(".error").hide();
+
+        if($(this).val() == 'Перевод на банковскую карту') {
+            $("#oplata_text").html("Номер карты <strong>Сбербанка</strong> для внесения оплаты Вам сообщит менеджер после обработки заказа.");
+
+        } else if($(this).val() == 'Банковский счёт') {
+            $("#oplata_text").html("Счёт на оплату заказа будет отправлен на Вашу электронную почту после обработки заказа.")
+
+        } else if($("#dostavka_select").val() == 'самовывоз Конструктор' || $("#dostavka_select").val() == 'самовывоз Славянский Мир') {
+            if($(this).val() == 'Наличными в пункте самовывоза' && parseInt($("#summacart").text()) < 20000) {
+                $("#oplata_text").html("В случае оплаты наличными, в пункт самовывоза нужно будет приезжать <strong>два раза</strong>. Первый для оплаты, второй после поступления заказа.")
+            } else {
+                $("#oplata_text").html("");
+            }
+
+        } else if($("#dostavka_select").val() == 'в пределах МКАД' || $("#dostavka_select").val() == 'за пределы МКАД') {
+            if($(this).val() == 'Наличными при получении' && parseInt($("#summacart").text()) < 20000) {
+                $("#oplata_text").html("Для заказов на сумму менее <strong>20000 ₽</strong> услуга доставки оплачивается заранее в полном размере переводом на карту <strong>Сбербанка</strong>.")
+            } else {
+                $("#oplata_text").html("");
+            }
+
+        } else if($("#dostavka_select").val() == 'в регион' && !$("#lico_yur").is(":checked")) {
+			$("#oplata_text").html("");
+		} else {
+            $("#oplata_text").html("");
+        }
+	});
+
+	$("#tk_select").change(function(){
+        $(this).parent().find(".error").hide();
+        if($("#tk_select").val() == 'Другая')
+		{
+			$("#tk_text").html("Укажите название транспортной компании в поле \"Дополнительная информация\"");
+		}
+		else
+		{			
+			$("#tk_text").html("");
+		}
+	});
+    $(".cart_people_fiz").click(function(){
+        $(".cart_people_fiz").css("background","#d8d8d8");
+        $(".cart_people_yur").css("background","#a8a8a8");
+        $("#lico_fiz").attr("checked","checked");
+        $("#lico_yur").removeAttr("checked");
+        $("#div_rekvizity").hide().prev().hide();
+        $("#fio").text("ФИО");
+
+        if($("#dostavka_select").val() != "Не выбрано") {
+            $("#dostavka_select").val("Не выбрано").change();
+        }
+    });
+
+    $(".cart_people_yur").click(function(){
+        $(".cart_people_fiz").css("background","#a8a8a8");
+        $(".cart_people_yur").css("background","#d8d8d8");
+        $("#lico_fiz").removeAttr("checked");
+        $("#lico_yur").attr("checked","checked");
+        $("#div_rekvizity").show().prev().show();
+        $("#fio").text("Наименование (представитель) компании");
+
+        if($("#dostavka_select").val() != "Не выбрано") {
+            $("#dostavka_select").val("Не выбрано").change();
+        }
+    });
+
+	$("#razgruzka").click(function(){
+		if ($(this).attr('checked') == 'checked')
+		{
+			$(".lift").removeAttr("checked");
+			$("#lift_da").attr("checked","checked");
+			$("#div_etazh").hide();
+			$("#div_lift").show();
+		}
+		else
+		{
+			$("#div_lift").hide();
+			$("#div_etazh").hide();
+		}
+	});
+
+	$(".lift").click(function(){
+		if($("#lift_net").attr("checked") == 'checked')
+		{$("#div_etazh").show()}
+		else $("#div_etazh").hide();
+	});
+    $(".cart_oform_input input").on("input",function(){
+        $(this).parent().find(".error").hide();
+    });
+
+});
+
+
+
+function CustomAutoload() {
+    this.$content = null;
+    this.nextSelector = null;
+    this.completed = false;
+
+    this.register = function ($content, nextSelector) {
+        this.$content = $content;
+        this.nextSelector = nextSelector;
+        this.completed = false;
+
+        $(document).on('scroll', () => { this.monitoring() });
+    }
+
+    this.unregister = function() {
+        this.completed = true;
+        $(document).off('scroll', () => { this.monitoring() });
+    };
+
+    this.monitoring = function() {
+        let window_bottom = $(window).height() + window.pageYOffset;
+        let content_bottom = this.getCoords(this.$content.get(0)).top + this.$content.height();
+
+        if(content_bottom - window_bottom < 40 && !this.completed) {
+            this.unregister();
+
+            if(this.$content.find(this.nextSelector).length > 0) {
+                this.loadData(this.$content, this.$content.find(this.nextSelector).last())
+                    .then(result => {
+                        if(this.$content.find(this.nextSelector).length > 0) {
+                            this.register(this.$content, this.nextSelector);
+                        }
+                    });
+            }
+        }
+    };
+
+    this.loadData = function($content, $nextSelector) {
+        return new Promise(resolve => {
+            $content.append('<div class="jscroll-added" />')
+                .children('.jscroll-added').last()
+                .html('<div class="jscroll-loading" id="jscroll-loading"><img src="/images/loading.gif" alt="Загрузка" /> Загрузка...</div>');
+
+            $content.find('div.jscroll-added').last().load($nextSelector.attr('href'), {'items': $nextSelector.text()}, function(r, status) {
+                $nextSelector.remove();
+                resolve();
+            });
+        });
+    };
+
+    this.getCoords = function(elem) {
+        let box = elem.getBoundingClientRect();
+
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset
+        };
+    }
+
+}

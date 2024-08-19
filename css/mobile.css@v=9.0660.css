@@ -1,0 +1,890 @@
+﻿@media only screen and (max-width: 810px) {
+
+html {}
+body {background: #f5f5f5; color: #1c1c1c; font-family: 'Roboto', sans-serif;}
+a:focus {outline: none;}
+img {border: none;}
+.clear {clear: both;}
+.line {width: 100%; height: 1px; margin: 5px 0px; clear: both; border-top: 1px solid #d9d9d9;}
+.line2 {width: 100%; height: 1px; margin: 5px 0px; clear: both; border-top: 1px solid #d9d9d9;}
+
+/* Меню над шапкой */
+.danger_fon {display: none;}
+
+/* covid_2019 */
+.covid_2019_fon {width: 100%; height: 40px; margin: 0px; padding: 0px; background: #ffae17;}
+.covid_2019 {width: 95%; height: 30px; margin: 0px auto; padding: 5px 0px; font-size: 12px; font-family: 'Roboto', sans-serif; color: #1c1c1c; background: #ffae17; text-align: center; line-height: 15px;}
+.covid_2019 a {color: #1c1c1c; text-decoration: underline;}
+.covid_2019 a:hover {color: #1c1c1c; text-decoration: none;}
+
+.work_shop {width: 100%; height: 100%; margin: 20px 0px 20px 0px; padding: 50px; background: #ffae17; border: 2px solid #000;}
+
+/* Шапка сайта */
+.head_bg {display: none;}
+.headnew_bg {display: none;}
+
+/* Каталог товаров с поиском */
+.menu_cp_1 {display: none;}
+
+.menu_cp_bg {width: 100%; margin: -55px 0px 0px 0px; background: none; border: none;}
+.menu_cp {width: 100%; background: none; border: none;}
+.menu_cp_search {position: fixed; width: 100%; height: 51px; margin: 0px; z-index: 99999; background: none; border-bottom: none;}
+.menu_cp_poisk_pole {width: 100%; height: 50px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; color: #808080; text-align: left; background: #fafafa; border-bottom: 1px solid #d9d9d9; -webkit-appearance: none;}
+.menu_cp_poisk_icon {display: none;}
+
+.search_mobile_text2 {display: none; margin: 55px 0px 0px 0px;}
+
+/* Выпадающий поиск */
+#div_search_fastresults {position: absolute; display: none; width: 100%; min-height: 1px; max-height: 800px; margin: 50px 0px 0px 0px; padding: 0px; background: #303030; z-index: 99999; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;}
+#div_fastresults {margin: 0px; padding: 0px;}
+#div_fastresults ul {display: block; list-style: none; margin: 0px; padding: 0px;}
+#div_fastresults li {margin: 0px; padding: 0px; font-size: 12px; font-family: 'Roboto', san-serif; font-weight: normal; color: #a6a6a6; line-height: 14px;}
+#div_fastresults li a {display: block; list-style: none; width: 100%; height: 100px; margin: 0px; padding: 10px; color: #a6a6a6; text-decoration: none; background: #303030; border-bottom: 1px solid #474747;}
+#div_fastresults li a:hover {color: #a6a6a6; text-decoration: none; background: #000; border-bottom: 1px solid #474747;}
+#div_fastresults_foto {float: left; width: 60px; height: 100px; margin: 0px 10px 0px 0px; padding: 0px;}
+#div_fastresults_foto img {max-width: 60px; max-height: 60px;}
+
+/* Основная часть */
+.front {width: 90%; margin: 0px auto; text-align: left;}
+.front p {padding: 0px; margin: 5px 0px 5px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px;}
+.front h1 {padding: 0px; margin: 10px 0px 5px 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.front h2 {padding: 0px; margin: 10px 0px 5px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.front h3 {padding: 0px; margin: 10px 0px 5px 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.front h4 {padding: 0px; margin: 10px 0px 5px 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 20px;}
+.front ul {padding: 0px; margin: 0px;}
+.front li {padding: 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px;}
+.front a {color: #1c1c1c; text-decoration: underline;}
+.front a:hover {color: #1c1c1c; text-decoration: none;}
+
+/* Баннеры */
+.banner {display: none;}
+
+/* Каталог на главной странице */
+.front_catalog {width: 100%; margin: 5px 0px 10px 0px; padding: 0px;}
+
+.front_ceramic {float: none; width: 100%; height: 110px; margin: 0px 0px 10px 0px; padding: 0px;}
+.front_ceramic_fon {position: absolute; width: 90%; height: 110px; margin: 0px; padding: 0px; background: #000; opacity: 0.5; z-index: 10;}
+.front_ceramic_fon:hover {background: #000; opacity: 0;}
+.front_ceramic_text {position: absolute; width: 80%; margin: 20px 0px 0px 10px; padding: 0px; font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #fff; text-transform: uppercase; text-align: left; line-height: 30px; z-index: 100;}
+.front_ceramic_link {position: absolute; width: 80%; margin: 90px 0px 0px 10px; padding: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: underline; text-align: left; line-height: 14px; z-index: 100;}
+.front_ceramic_icon {width: 100%; height: 110px; margin: 0px; padding: 0px; overflow: hidden;}
+.front_ceramic_icon img {min-width: 100%; max-height: 110px;}
+
+.front_keramogranit {float: none; width: 100%; height: 110px; margin: 0px 0px 10px 0px; padding: 0px;}
+.front_keramogranit_fon {position: absolute; width: 90%; height: 110px; margin: 0px; padding: 0px; background: #000; opacity: 0.5; z-index: 10;}
+.front_keramogranit_fon:hover {background: #000; opacity: 0;}
+.front_keramogranit_text {position: absolute; width: 80%; margin: 20px 0px 0px 10px; padding: 0px; font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #fff; text-transform: uppercase; text-align: left; line-height: 30px; z-index: 100;}
+.front_keramogranit_link {position: absolute; width: 80%; margin: 90px 0px 0px 10px; padding: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: underline; text-align: left; line-height: 14px; z-index: 100;}
+.front_keramogranit_icon {width: 100%; height: 110px; margin: 0px; padding: 0px; overflow: hidden;}
+.front_keramogranit_icon img {min-width: 100%; max-height: 110px;}
+
+.front_klinker {float: none; width: 100%; height: 110px; margin: 0px 0px 10px 0px; padding: 0px;}
+.front_klinker_fon {position: absolute; width: 90%; height: 110px; margin: 0px; padding: 0px; background: #000; opacity: 0.5; z-index: 10;}
+.front_klinker_fon:hover {background: #000; opacity: 0;}
+.front_klinker_text {position: absolute; width: 80%; margin: 20px 0px 0px 10px; padding: 0px; font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #fff; text-transform: uppercase; text-align: left; line-height: 30px; z-index: 100;}
+.front_klinker_link {position: absolute; width: 80%; margin: 90px 0px 0px 10px; padding: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: underline; text-align: left; line-height: 14px; z-index: 100;}
+.front_klinker_icon {width: 100%; height: 110px; margin: 0px; padding: 0px; overflow: hidden;}
+.front_klinker_icon img {min-width: 100%; max-height: 110px;}
+
+.front_mozaika {float: none; width: 100%; height: 110px; margin: 0px 0px 10px 0px; padding: 0px;}
+.front_mozaika_fon {position: absolute; width: 90%; height: 110px; margin: 0px; padding: 0px; background: #000; opacity: 0.5; z-index: 10;}
+.front_mozaika_fon:hover {background: #000; opacity: 0;}
+.front_mozaika_text {position: absolute; width: 80%; margin: 20px 0px 0px 10px; padding: 0px; font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #fff; text-transform: uppercase; text-align: left; line-height: 30px; z-index: 100;}
+.front_mozaika_link {position: absolute; width: 80%; margin: 90px 0px 0px 10px; padding: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: underline; text-align: left; line-height: 14px; z-index: 100;}
+.front_mozaika_icon {width: 100%; height: 110px; margin: 0px; padding: 0px; overflow: hidden;}
+.front_mozaika_icon img {min-width: 100%; max-height: 110px;}
+
+/* Акции на главной странице */
+.stocks_front {width: 100%; margin: 10px 0px;}
+.stocks_front_zagolovok {padding: 0px; margin: 0px 0px 20px 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 22px;}
+.stocks_front_zagolovok span {padding: 0px; margin: 0px 0px 0px 20px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px;}
+.stocks_front_zagolovok a {padding: 10px 30px 10px 30px; margin: 0px; color: #1c1c1c; text-decoration: none; border: 1px solid #1c1c1c; background: #f7f7f7;}
+.stocks_front_zagolovok a:hover {padding: 10px 30px 10px 30px; margin: 0px; color: #fff; text-decoration: none; border: 1px solid #1c1c1c; background: #1c1c1c;}
+.stocks_front_group {width: 100%; margin: 0px 0px 20px 0px;}
+.stocks_front_date {width: 100%; height: 20px; padding: 0px 0px 0px 25px; margin: 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left; line-height: 18px; background: url(../images/calendar.svg) left center no-repeat;}
+.stocks_front_name {padding: 0px; margin: 5px 0px 0px 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 22px;}
+.stocks_front_name a {color: #1c1c1c; text-decoration: none;}
+.stocks_front_name a:hover {color: #1c1c1c; text-decoration: underline;}
+.stocks_front_text {padding: 0px; margin: 5px 0px 0px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px;}
+
+/* О компании */
+.text_front {width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.text_front_left {width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.text_front_left_group {width: 100%; height: 100%; max-height: 100px; padding: 0px; margin: 0px;}
+.text_front_left_icon {float: left; width: 50px; padding: 0px; margin: 0px 10px 0px 0px;}
+.text_front_left_name {padding: 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.text_front_left_name a {color: #1c1c1c; text-decoration: none;}
+.text_front_left_name a:hover {color: #1c1c1c; text-decoration: underline;}
+.text_front_left_text {padding: 0px; margin: 5px 0px 0px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px;}
+.text_front_left_text a {color: #1c1c1c; text-decoration: underline;}
+.text_front_left_text a:hover {color: #1c1c1c; text-decoration: none;}
+.text_front_right {width: 100%; height: 100%; padding: 0px 0px 10px 0px; margin: 0px;}
+.text_front_right_zagolovоk {padding: 0px; margin: 0px 0px 10px 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.text_front_right_name {padding: 0px; margin: 5px 0px 0px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.text_front_right_text {padding: 0px; margin: 5px 0px 0px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px;}
+.text_front_right_text a {color: #1c1c1c; text-decoration: underline;}
+.text_front_right_text a:hover {color: #1c1c1c; text-decoration: none;}
+
+/* Правая часть, когда есть фильтр */
+.content {width: 100%; padding: 0px; margin: 0px; text-align: left;}
+.content p {padding: 0px; margin: 5px 0px 5px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: justify; line-height: 18px;}
+.content h1 {padding: 0px; margin: 5px 0px 5px 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.content h2 {padding: 0px; margin: 5px 0px 5px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.content h3 {padding: 0px; margin: 5px 0px 5px 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.content a {color: #1c1c1c; text-decoration: underline;}
+.content a:hover {color: #1c1c1c; text-decoration: none;}
+
+/* Фильтр */
+.filters_mobile {width: 100%; padding: 10px; margin: 5px 0px 5px 0px; color: #fff; font-size: 15px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: center; line-height: 16px; background: #1c1c1c; z-index: 99999;}
+.filters_mobile a {text-decoration: underline; color: #fff; cursor: pointer;}
+.filters_mobile a:hover {text-decoration: none; color: #fff;}
+.filters_mobile_text1 {display: none;}
+.metismenu {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.metismenu ul {padding: 0px; margin: 0px; background: #fff;}
+.metismenu li {width: 100%; display: block; list-style: none; padding: 10px 0px 10px 8px; margin: 5px 0px 5px 0px; border: 1px solid #d9d9d9; background: #fff;}
+.metismenu li a {text-decoration: none; color: #1c1c1c;}
+.metismenu > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+.metismenu li span {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; border-bottom: 1px solid #d9d9d9; cursor: pointer;}
+.metismenu li span a {text-decoration: none; color: #1c1c1c; border-bottom: 1px solid #d9d9d9;}
+.metismenu li span a:hover {text-decoration: none; color: #1c1c1c; border-bottom: 0px solid #d9d9d9;}
+.metismenu li span a:focus {text-decoration: none; color: #1c1c1c; border-bottom: 0px solid #d9d9d9;}
+.metismenu li span a:active {text-decoration: none; color: #1c1c1c; border-bottom: 0px solid #d9d9d9;}
+
+.metismenu .filters_group {width: 100%; max-height: 270px; padding: 0px; margin: 10px 0px 0px 0px; background: #fff; overflow-y: auto; -webkit-overflow-scrolling: touch;}
+.metismenu .filters_group_country {padding: 0px; margin: 10px 0px 5px 0px; color: #1c1c1c; font-size: 15px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: left; line-height: 16px;}
+.metismenu .filters_group_link {padding: 0px; margin: 0px 0px 5px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 16px;}
+.metismenu .filters_group_link a {color: #1c1c1c; text-decoration: none; border-bottom: 1px dotted #1c1c1c;}
+.metismenu .filters_group_link a:hover {color: #1c1c1c; text-decoration: none; border-bottom: 0px dotted #1c1c1c;}
+.metismenu .filters_group_link span {padding: 0px; margin: 0px 0px 0px 3px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left; line-height: 16px; border: none;}
+.metismenu .filters_group_razmer {float: left; width: 30%; padding: 0px; margin: 0px 0px 5px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 16px;}
+.metismenu .filters_group_razmer a {color: #1c1c1c; text-decoration: none; border-bottom: 1px dotted #1c1c1c;}
+.metismenu .filters_group_razmer a:hover {color: #1c1c1c; text-decoration: none; border-bottom: 0px dotted #1c1c1c;}
+
+/* Аккордеон */
+.metismenu_accordion {
+	width: 100%;
+	padding: 0px 0px 10px 0px;
+	margin: 0px;
+	border-top: 1px solid #d9d9d9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.metismenu_accordion ul {padding: 0px; margin: 0px; background: #fff;}
+.metismenu_accordion li {width: 100%; display: block; list-style: none; padding: 10px 0px 10px 8px; margin: 0px; border-bottom: 1px solid #d9d9d9; border-left: 1px solid #d9d9d9; border-right: 1px solid #d9d9d9; border-top: none; background: #fff;}
+.metismenu_accordion li a {text-decoration: none; color: #1c1c1c;}
+.metismenu_accordion > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+.metismenu_accordion li span {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; cursor: pointer;}
+.metismenu_accordion li span a {text-decoration: none; color: #1c1c1c;}
+.metismenu_accordion li span a:hover {text-decoration: none; color: #1c1c1c; border-bottom: 0px solid #d9d9d9;}
+.metismenu_accordion li span a:focus {text-decoration: none; color: #1c1c1c; border-bottom: 0px solid #d9d9d9;}
+.metismenu_accordion li span a:active {text-decoration: none; color: #1c1c1c; border-bottom: 0px solid #d9d9d9;}
+
+.metismenu_accordion .filters_group {width: 100%; max-height: 500px; padding: 0px; margin: 10px 0px 0px 0px; background: #fff; overflow: auto; -webkit-overflow-scrolling: touch;}
+.metismenu_accordion .filters_group_link {padding: 0px 0px 0px 20px; margin: 0px 0px 5px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 16px; background: url(../images/link.svg) left no-repeat;}
+.metismenu_accordion .filters_group_link a {color: #1c1c1c; text-decoration: none; border-bottom: 1px dotted #1c1c1c;}
+.metismenu_accordion .filters_group_link a:hover {color: #1c1c1c; text-decoration: none; border-bottom: 0px dotted #1c1c1c;}
+
+/* Хлебные крошки */
+.way {width: 100%; padding: 0px; margin: 10px 0px 10px 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left; line-height: 18px;}
+.way a {color: #808080; text-decoration: none;}
+.way a:hover {color: #808080; text-decoration: none;}
+
+/* Страница каталог */
+.naznachenie {width: 100%; height: 250px; margin: 0px 0px 10px 0px; padding: 0px;}
+.naznachenie_fon {position: absolute; width: 90%; height: 250px; margin: 0px; padding: 0px; background: #000; opacity: 0.5; z-index: 10;}
+.naznachenie_fon:hover {background: #000; opacity: 0;}
+.naznachenie_text {position: absolute; width: 80%; margin: 20px 0px 0px 10px; padding: 0px; font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #fff; text-transform: uppercase; text-align: left; line-height: 30px; z-index: 100;}
+.naznachenie_link {position: absolute; width: 80%; margin: 200px 0px 0px 10px; padding: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: underline; text-align: left; line-height: 14px; z-index: 100;}
+.naznachenie_icon {width: 100%; height: 250px; margin: 0px; padding: 0px; overflow: hidden;}
+.naznachenie_icon img {min-width: 100%; max-height: 250px;}
+
+.razmer {width: 100%; margin: 0px;}
+.razmer_text {float: left; width: 33%; margin: 0px; padding: 5px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: center; color: #1c1c1c; background: none;}
+.razmer_text a {color: #1c1c1c; text-decoration: underline; background: #fff; border: 1px solid #808080;}
+.razmer_text a:hover {color: #fff; text-decoration: none; background: #000; border: 1px solid #000;}
+
+/* Коллекция */
+.collection {width: 100%; height: 100%; margin: 5px 0px 10px 0px; padding: 0px 0px 5px 0px;}
+.collection:hover {background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.3);}
+
+.collection_foto {width: 100%; height: 350px; margin: 0px 0px 10px 0px; padding: 0px; border-bottom: 1px solid #dedede; overflow: hidden; background: #fff;}
+.collection_foto_middle {width: 350px; height: 350px; margin: 0px; padding: 0px; display: table-cell; vertical-align: middle; text-align: center;}
+.collection_foto img {min-width: 350px; max-height: 350px;}
+
+.collection_name {width: 100%; height: 100%; margin: 0px 0px 10px 0px; padding: 0px 5px 5px 5px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 16px; border-bottom: 1px solid #f7f7f7; display: block; vertical-align: none;}
+.collection_name a {color: #1c1c1c; text-decoration: none;}
+.collection_name a:hover {color: #751515; text-decoration: none;}
+
+.collection_code {width: 100%; height: 100%; padding: 0px; margin: 10px 5px 5px 5px; font-size: 12px; font-family: 'Roboto', san-serif; font-weight: normal; color: #808080; line-height: 16px;}
+
+.collection_text_param {width: 100%; height: 100%; margin: 0px; padding: 0px 5px 10px 5px; display: block; vertical-align: none;}
+.collection_text_param_left {float: left;  margin: 0px; padding: 0px;}
+.collection_text_param_left_name {margin: 0px; padding: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 16px; text-align: left;}
+.collection_text_param_left_name a {color: #1c1c1c; text-decoration: none;}
+.collection_text_param_left_name a:hover {color: #1c1c1c; text-decoration: none;}
+.collection_text_param_left_text {margin: 0px; padding: 0px;  font-size: 11px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; line-height: 16px; text-align: left;}
+.collection_text_param_left_text a {color: #808080; text-decoration: none;}
+.collection_text_param_left_text a:hover {color: #808080; text-decoration: none;}
+.collection_text_param_right {float: right; margin: 0px; padding: 0px;}
+.collection_text_param_right_name {margin: 0px; padding: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; line-height: 16px; text-align: right;}
+.collection_text_param_right_text {margin: 0px; padding: 0px;  font-size: 11px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #ff0000; line-height: 16px; text-align: right;}
+
+.collection_lenta {position: absolute; width: 250px;}
+.collection_new {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #000; text-align: left; line-height: 18px; background: #ffc61c;}
+.collection_hit {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #008000;}
+.collection_sale {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #ff0000;}
+.collection_likv {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #000;}
+.collection_up {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #000;}
+
+.collection_snyata {width: 100%; height: 70px; margin: 0px 0px 10px 0px; padding: 10px 0px 10px 70px; background: #fff url(../images/snyata_red.svg) 10px 10px no-repeat;}
+.collection_snyata span {position: relative; top: 5px; color: #ff0000; font-size: 18px; font-family: 'Roboto', san-serif; font-weight: bold; text-align: left; line-height: 18px;}
+
+/* Коллекция внутри */
+.collection_obzor {width: 100%; height: 100%; margin: 5px 0px 10px 0px; padding: 0px;}
+
+.collection_obzor_foto {float: none; width: 100%; height: 350px; margin: 0px 0px 10px 0px; padding: 0px; overflow: hidden; background: #fff; border: 1px solid #ededed;}
+.collection_obzor_foto:hover {background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.3);}
+.collection_obzor_foto_middle {width: 350px; height: 350px; margin: 0px; padding: 0px; display: table-cell; vertical-align: middle; text-align: center;}
+.collection_obzor_foto img {min-width: 350px; max-height: 350px;}
+
+.collection_obzor_information {float: none; width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.collection_obzor_name {padding: 0px; margin: 0px 0px 10px 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 18px; text-align: left;}
+.collection_obzor_name h1 {padding: 0px; margin: 0px 0px 10px 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 18px; text-align: left;}
+
+.collection_obzor_text {width: 100%; padding: 10px 10px 0px 10px; margin: 0px 0px 10px 0px; background: #fff; border-bottom: 1px solid #ededed;}
+
+.collection_obzor_text_param {float: none; width: 100%; height: 100%; padding: 0px 0px 10px 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 14px;}
+.collection_obzor_text_param a {color: #1c1c1c; text-decoration: underline;}
+.collection_obzor_text_param a:hover {color: #1c1c1c; text-decoration: none;}
+
+.collection_obzor_format_name {clear: both; padding: 0px; margin: 0px 0px 20px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 14px;}
+.collection_obzor_format {padding: 0px; margin: 0px 0px 30px 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c;}
+.collection_obzor_format a {padding: 10px; margin: 0px 5px 0px 0px; color: #1c1c1c; text-decoration: none; border: 1px solid #ededed; background: #fff;}
+.collection_obzor_format a:hover {color: #fff; text-decoration: none; border: 1px solid #000; background: #000;}
+
+.collection_obzor_button {width: 100%; padding: 0px; margin: 0px;}
+
+.collection_obzor_button_3d {float: none; width: 100%; padding: 10px; margin: 0px 0px 10px 0px; background: #fff; border-bottom: 1px solid #ededed;}
+.collection_obzor_button_3d_text {padding: 0px; margin: 0px 0px 10px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; line-height: 16px; text-align: center;}
+.collection_obzor_button_3d_click {padding: 0px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; color: #fff;}
+.collection_obzor_button_3d_click a {display: block; padding: 10px 0px 10px 0px; margin: 0px; color: #fff; text-decoration: none; background: #1c1c1c;}
+.collection_obzor_button_3d_click a:hover {color: #fff; text-decoration: none; background: #000;}
+
+.collection_obzor_button_dostavka {float: none; width: 100%; padding: 10px; margin: 0px 0px 10px 0px; background: #fff; border-bottom: 1px solid #ededed;}
+.collection_obzor_button_dostavka_text {padding: 0px; margin: 0px 0px 10px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; line-height: 16px; text-align: center;}
+.collection_obzor_button_dostavka_click {padding: 0px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; color: #fff;}
+.collection_obzor_button_dostavka_click a {display: block; padding: 10px 0px 10px 0px; margin: 0px; color: #fff; text-decoration: none; background: #1c1c1c;}
+.collection_obzor_button_dostavka_click a:hover {color: #fff; text-decoration: none; background: #000;}
+
+.collection_text {clear: both; padding: 20px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 16px; text-align: left; background: #fff; border-bottom: 1px solid #ededed;}
+.collection_text a {color: #1c1c1c; text-decoration: underline;}
+.collection_text a:hover {color: #1c1c1c; text-decoration: none;}
+
+.collection_tip {clear: both; padding: 10px 0px 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 16px; text-align: left;}
+.collection_tip a {color: #1c1c1c; text-decoration: underline;}
+.collection_tip a:hover {color: #1c1c1c; text-decoration: none;}
+
+/* Дополнительные фото интерьеров в коллекции */
+.interior_collections_group {width: 100%; height: 100%; display: none; margin: 0px; padding: 5px; background: #fff; border: 1px solid #f7f7f7;}
+.interior_collections {float: left; width: 60px; height: 60px; padding: 0px; margin: 0px 5px 5px 0px; border: 1px solid #ededed; background: #f7f7f7; overflow: hidden;}
+.interior_collections_middle {width: 60px; height: 60px; margin: 0px; padding: 0px; display: table-cell; vertical-align: middle; text-align: center;}
+.interior_collections img {max-width: 60px; max-height: 60px;}
+
+/* Переход во вторую часть коллекции */
+.double_collection {width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.double_collection_img {display: none; width: 50px; height: 50px; padding: 0px; margin: 0px 10px 10px 0px; border: 1px solid #d9d9d9; overflow: hidden;}
+.double_collection_img img {min-width: 50px; max-height: 50px;}
+.double_collection_text {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 0px; margin: 0px 0px 10px 0px; line-height: 18px; text-align: left;}
+.double_collection_text a {color: #1c1c1c; text-decoration: underline;}
+.double_collection_text a:hover {color: #1c1c1c; text-decoration: none;}
+.double_collection_button {padding: 0px; margin: 20px 0px 10px 0px;}
+.double_collection_button a {padding: 10px 20px 10px 20px; margin: 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-decoration: none; background: #f7f7f7; border: 1px solid #ededed;}
+.double_collection_button a:hover {color: #fff; text-decoration: none; background: #000; border: 1px solid #000;}
+
+/* Товары в коллекции */
+.tovar {width: 100%; height: 100%; margin: 5px 0px 10px 0px; padding: 0px; background: #fff;}
+.tovar:hover {background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.3);}
+.tovar_snyat {margin: 0px; padding: 0px 0px 5px 0px; color: #ff0000; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; line-height: 18px; text-align: center;}
+
+.tovar_foto {width: 100%; height: 350px; margin: 0px 0px 10px 0px; padding: 0px; border: 1px solid #d9d9d9; overflow: hidden; background: #fff;}
+.tovar_foto_middle {width: 350px; height: 350px; margin: 0px; padding: 0px; display: table-cell; vertical-align: middle; text-align: center;}
+.tovar_foto img {max-width: 350px; max-height: 350px;}
+
+.tovar_lenta {position: absolute; width: 300px;}
+.tovar_lenta_new {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #000; text-align: left; line-height: 18px; background: #ffc61c;}
+.tovar_lenta_hit {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #008000;}
+.tovar_lenta_sale {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #ff0000;}
+.tovar_lenta_likv {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #000;}
+.tovar_lenta_up {float: left; margin: 5px 0px 5px 5px; padding: 5px 10px 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #000;}
+.tovar_lenta_up2 {float: left; margin: 5px 5px 5px 0px; padding: 5px 10px 5px 0px; font-size: 12px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #000;}
+.tovar_lenta_surface {position: absolute; float: left; margin: 320px 5px 5px 5px; padding: 3px 5px; font-size: 12px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #c2c2c2;}
+
+.tovar_name {width: 100%; height: 100%; margin: 0px 0px 5px 0px; padding: 0px 5px 10px 5px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 16px; border-bottom: 1px solid #f7f7f7; display: block; vertical-align: middle;}
+.tovar_name a {color: #1c1c1c; text-decoration: none;}
+.tovar_name a:hover {color: #751515; text-decoration: none;}
+
+.tovar_code {width: 100%; height: 100%; margin: 10px 0px 5px 0px; padding: 0px 5px; font-size: 12px; font-family: 'Roboto', san-serif; font-weight: normal; color: #808080; line-height: 20px;}
+
+.tovar_text_param {width: 100%; height: 30px; margin: 0px 0px 10px 0px; padding: 0px 5px; background: #fff;}
+.tovar_text_param_left {float: left; width: 50%; height: 100%; margin: 0px; padding: 0px;}
+.tovar_text_param_left_name {margin: 0px; padding: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; line-height: 16px; text-align: left;}
+.tovar_text_param_left_text {margin: 0px; padding: 0px;  font-size: 11px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #2c8a25; line-height: 16px; text-align: left;}
+.tovar_text_param_right {float: right; width: 50%; height: 100%; margin: 0px; padding: 0px;}
+.tovar_text_param_right_name {margin: 0px; padding: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; line-height: 16px; text-align: right;}
+.tovar_text_param_right_text {margin: 0px; padding: 0px;  font-size: 11px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #ff0000; line-height: 16px; text-align: right;}
+
+.tovar_cart {width: 100%; height: 100%; padding: 10px; margin: 0px;}
+
+.tovar_price {width: 100%; height: 100%; margin: 0px 0px 5px 0px; padding: 0px; text-align: left;}
+.tovar_price_left {margin: 0px 0px 5px 0px; padding: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left; line-height: 18px;}
+.tovar_price_right {margin: 0px; padding: 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.tovar_price_right span {font-size: 22px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #ff0000; line-height: 18px;}
+
+.tovar_korzina {width: 100%; height: 100%; margin: 5px 0px; padding: 0px;}
+
+.tovar_korzina_kolvo_ed_izm {width: 100%; height: 100%; height: 15px; margin: 10px 0px 0px 0px; padding: 0px;}
+.tovar_korzina_kolvo_ed_izm_kvm {float: left; width: 82px; margin: 0px; padding: 0px; color: #808080; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center;}
+.tovar_korzina_kolvo_ed_izm_sht {float: left; width: 82px; margin: 0px; padding: 0px; color: #808080; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center;}
+.tovar_korzina_kolvo_ed_izm_up {float: left; width: 82px; margin: 0px; padding: 0px; color: #808080; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center;}
+
+.tovar_korzina_kolvo_group {width: 100%; height: 100%; margin: 5px 0px; padding: 0px;}
+.tovar_korzina_minus input {width: 25px; height: 25px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: center; border: 1px solid #dedede; background: #f2f2f2; -webkit-appearance: none;}
+.tovar_korzina_minus input:hover {background: #fff;}
+.tovar_korzina_plus input {width: 25px; height: 25px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold;text-align: center; border: 1px solid #dedede; background: #f2f2f2; -webkit-appearance: none;}
+.tovar_korzina_plus input:hover {background: #fff;}
+.tovar_korzina_kolvo {float: left; margin: 0px; padding: 0px;}
+.tovar_korzina_kolvo input {width: 80px; height: 48px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; background: #fff; border: 1px solid #ededed; -webkit-appearance: none;}
+.tovar_korzina_kolvo2 {float: left; margin: 0px; padding: 0px;}
+.tovar_korzina_kolvo2 input {width: 80px; height: 48px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; background: #fff; border: 1px solid #ededed; -webkit-appearance: none;}
+.tovar_korzina_kolvo3 {float: left; margin: 0px; padding: 0px;}
+.tovar_korzina_kolvo3 input {width: 80px; height: 48px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; background: #fff; border: 1px solid #ededed; -webkit-appearance: none;}
+.kolvo_minus1, .kolvo_plus1 {cursor: pointer;}
+
+.tovar_korzina_icon {width: 100%; height: 100%; margin: 0px; padding: 0px;}
+.tovar_korzina_text {width: 100%; height: 100%; padding: 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; color: #fff;}
+.tovar_korzina_text a {display: block; padding: 15px 0px; margin: 0px; color: #fff; text-decoration: none; background: #1c1c1c;}
+.tovar_korzina_text a:hover {color: #fff; text-decoration: none; background: #000;}
+.tovar_v_korzine {width: 100%; height: 100%; margin: 0px; padding: 10px 0px; font-size: 12px; font-family: 'Roboto', san-serif; font-weight: normal; text-align: center; line-height: 15px; background: #e0e0e0; border: 1px solid #000;}
+
+/* Страница товара */
+.tovar_obzor {width: 100%; height: 100%; margin: 5px 0px 10px 0px; padding: 0px;}
+.tovar_obzor_foto {float: none; width: 100%; height: 350px; margin: 0px 0px 10px 0px; padding: 0px; overflow: hidden; border: 1px solid #ededed; background: #fff;}
+.tovar_obzor_foto:hover {background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.3);}
+.tovar_obzor_foto_middle {width: 350px; height: 350px; display: table-cell; vertical-align: middle; text-align: center;}
+.tovar_obzor_foto img {max-width: 350px; max-height: 350px;}
+
+.tovar_obzor_lenta {position: absolute; width: 300px;}
+.tovar_obzor_lenta_new {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #000; text-align: left; line-height: 18px; background: #ffc61c;}
+.tovar_obzor_lenta_hit {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #008000;}
+.tovar_obzor_lenta_sale {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #ff0000;}
+.tovar_obzor_lenta_likv {float: left; margin: 5px; padding: 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #000;}
+.tovar_obzor_lenta_up {float: left; margin: 5px 0px 5px 5px; padding: 5px 10px 5px 10px; font-size: 11px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #000;}
+.tovar_obzor_lenta_up2 {float: left; margin: 5px 5px 5px 0px; padding: 5px 10px 5px 0px; font-size: 12px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #000;}
+.tovar_obzor_lenta_surface {position: absolute; float: left; margin: 320px 5px 5px 5px; padding: 3px 5px; font-size: 12px; font-family: 'Roboto', san-serif; font-weight: normal; color: #fff; text-align: left; line-height: 18px; background: #c2c2c2;}
+
+.tovar_obzor_information {float: none; width: 100%; padding: 0px; margin: 0px;}
+
+.tovar_obzor_name {padding: 0px; margin: 0px 0px 10px 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 18px; text-align: left;}
+.tovar_obzor_name h1 {padding: 0px; margin: 0px 0px 10px 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 18px; text-align: left;}
+
+.tovar_obzor_text {width: 100%; padding: 10px 10px 0px 10px; margin: 0px; background: #fff; border-bottom: 1px solid #ededed;}
+
+.tovar_obzor_text_param {float: none; width: 100%; height: 100%; padding: 0px 0px 10px 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 14px;}
+.tovar_obzor_text_param a {color: #1c1c1c; text-decoration: underline;}
+.tovar_obzor_text_param a:hover {color: #1c1c1c; text-decoration: none;}
+
+.tovar_obzor_cart {width: 100%; height: 100%; padding: 10px; margin: 5px 0px; background: #fff; border-bottom: 1px solid #ededed;}
+
+.tovar_obzor_korzina {float: none; width: 100%; height: 100%; margin: 0px; padding: 0px;}
+
+.tovar_obzor_korzina_kolvo_ed_izm {width: 100%; height: 15px; margin: 0px; padding: 0px;}
+.tovar_obzor_korzina_kolvo_ed_izm_kvm {float: left; width: 82px; margin: 0px; padding: 0px; color: #808080; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center;}
+.tovar_obzor_korzina_kolvo_ed_izm_sht {float: left; width: 82px; margin: 0px; padding: 0px; color: #808080; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center;}
+
+.tovar_obzor_korzina_kolvo_group {width: 100%; margin: 5px 0px; padding: 0px;}
+.tovar_obzor_korzina_minus input {width: 25px; height: 25px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: center; border: 1px solid #dedede; background: #f2f2f2; -webkit-appearance: none;}
+.tovar_obzor_korzina_minus input:hover {background: #fff;}
+.tovar_obzor_korzina_plus input {width: 25px; height: 25px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold;text-align: center; border: 1px solid #dedede; background: #f2f2f2; -webkit-appearance: none;}
+.tovar_obzor_korzina_plus input:hover {background: #fff;}
+.tovar_obzor_korzina_kolvo {float: left; margin: 0px; padding: 0px;}
+.tovar_obzor_korzina_kolvo input {width: 80px; height: 48px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; background: #fff; border: 1px solid #ededed; -webkit-appearance: none;}
+.tovar_obzor_korzina_kolvo2 {float: left; margin: 0px; padding: 0px;}
+.tovar_obzor_korzina_kolvo2 input {width: 80px; height: 48px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; background: #fff; border: 1px solid #ededed; -webkit-appearance: none;}
+.kolvo_minus1, .kolvo_plus1 {cursor: pointer;}
+
+.tovar_obzor_korzina_icon {width: 100%; margin: 0px; padding: 0px;}
+.tovar_obzor_korzina_text {padding: 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; color: #fff;}
+.tovar_obzor_korzina_text a {display: block; padding: 15px 0px; margin: 0px; color: #fff; text-decoration: none; background: #1c1c1c;}
+.tovar_obzor_korzina_text a:hover {color: #fff; text-decoration: none; background: #000;}
+.tovar_obzor_v_korzine {width: 100%; margin: 0px; padding: 10px 0px; font-size: 12px; font-family: 'Roboto', san-serif; font-weight: normal; text-align: center; line-height: 15px; background: #e0e0e0; border: 1px solid #000;}
+
+.tovar_obzor_price {float: none; width: 100%; height: 100%; margin: 10px 0px 0px 0px; padding: 0px;}
+.tovar_obzor_price_old {margin: 0px; padding: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; text-decoration: line-through; text-align: left; color: #808080; margin: 0px; padding: 0px; line-height: 13px;}
+.tovar_obzor_price_old span {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 13px;}
+.tovar_obzor_price_roznica {margin: 0px 0px 5px 0px; padding: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: left; color: #808080; line-height: 18px;}
+.tovar_obzor_price_roznica_text {margin: 0px 0px 5px 0px; padding: 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: left; color: #1c1c1c; line-height: 18px;}
+.tovar_obzor_price_roznica_text span {font-size: 22px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #ff0000; line-height: 18px;}
+
+.tovar_obzor_price_kratno {margin: 10px 0px; padding: 0px; color: #1c1c1c; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: left; line-height: 14px;}
+
+/* Корзина шаг 1 */
+.korzina_shag {padding: 5px 0px 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 22px;}
+.cart_table {width: 100%; height: 100%; margin: 0px 0px 10px 0px; padding: 10px; border: 1px solid #ededed; background: #fff;}
+
+.cart_foto {float: none; width: 100px; height: 100px; padding: 0px; margin: 0px 0px 10px 0px; border: 1px solid #ededed; background: #fff;}
+.cart_foto_middle {width: 98px; height: 98px; display: table-cell; vertical-align: middle; overflow: hidden; text-align: center;}
+.cart_foto img {max-width: 98px; max-height: 98px;}
+
+.cart_name_group {float: none; width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.cart_name {width: 100%; height: 100%; padding: 0px; margin: 0px 0px 10px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 14px;}
+.cart_name a {color: #1c1c1c; text-decoration: none;}
+.cart_name a:hover {color: #1c1c1c; text-decoration: none;}
+.cart_kod_tovara {padding: 0px; margin: 0px 0px 10px 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left; line-height: 14px;}
+.cart_price {padding: 0px; margin: 10px 0px 0px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left; line-height: 16px;}
+.cart_price span {font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #ff0000; text-align: left; line-height: 22px;}
+
+.cart_korzina {float: none; width: 100%; height: 100%; margin: 5px 0px; padding: 10px 5px; background: #ededed;}
+
+.cart_korzina_kolvo_ed_izm {width: 270px; height: 15px; margin: 0px; padding: 0px;}
+.cart_korzina_kolvo_ed_izm_kvm {float: left; width: 82px; margin: 0px; padding: 0px; color: #808080; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center;}
+.cart_korzina_kolvo_ed_izm_sht {float: left; width: 82px; margin: 0px; padding: 0px; color: #808080; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center;}
+.cart_korzina_kolvo_ed_izm_up {float: left; width: 82px; margin: 0px; padding: 0px; color: #808080; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center;}
+
+.cart_korzina_kolvo_group {width: 270px; margin: 5px 0px; padding: 0px;}
+.cart_korzina_minus input {width: 25px; height: 25px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: center; border: 1px solid #dedede; background: #f2f2f2; -webkit-appearance: none;}
+.cart_korzina_minus input:hover {background: #fff;}
+.cart_korzina_plus input {width: 25px; height: 25px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold;text-align: center; border: 1px solid #dedede; background: #f2f2f2; -webkit-appearance: none;}
+.cart_korzina_plus input:hover {background: #fff;}
+.cart_korzina_kolvo {float: left; margin: 0px; padding: 0px;}
+.cart_korzina_kolvo input {width: 80px; height: 48px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; background: #fff; border: 1px solid #ededed; -webkit-appearance: none;}
+.cart_korzina_kolvo2 {float: left; margin: 0px; padding: 0px;}
+.cart_korzina_kolvo2 input {width: 80px; height: 48px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; background: #fff; border: 1px solid #ededed; -webkit-appearance: none;}
+.cart_korzina_kolvo3 {float: left; margin: 0px; padding: 0px;}
+.cart_korzina_kolvo3 input {width: 80px; height: 48px; margin: 0px; padding: 0px; color: #1c1c1c; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; background: #fff; border: 1px solid #ededed; -webkit-appearance: none;}
+.cart_minus1, .cart_plus1 {cursor: pointer;}
+
+.cart_summa {float: none; width: 100%; height: 100%; padding: 5px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.cart_summa span {font-size: 18px; font-family: 'Roboto', san-serif; font-weight: bold; color: #ff0000;}
+
+.cart_delete {float: none; width: 100%; height: 100%; padding: 5px 0px; margin: 0px;}
+.cart_delete a {display: block; width: 40px; height: 40px; padding: 0px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #808080; text-decoration: none; display: table-cell; vertical-align: middle; text-align: center; background: #ededed; border-radius: 50%;}
+.cart_delete a:hover {color: #fff; text-decoration: none; background: #000;}
+.cart_delete a:active {color: #fff; text-decoration: none; background: #000;}
+
+.cart_itog {width: 100%; height: 100%; padding: 5px 0px; margin: 0px;}
+.cart_itog_price {padding: 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.cart_itog_price span {font-size: 18px; font-family: 'Roboto', san-serif; font-weight: bold; color: #ff0000; line-height: 18px;}
+
+
+/* Корзина шаг 2 */
+.korzina_shag2 {padding: 5px 0px 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 16px;}
+.cart_step2 {width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.cart_people {width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.cart_people_fiz {float: left; width: 50%; height: 100%; padding: 5px 0px 10px 5px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; background: #d8d8d8; text-align: left;}
+.cart_people_yur {float: right; width: 50%; height: 100%; padding: 5px 0px 10px 5px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; background: #a8a8a8; text-align: left;}
+.cart_oform {width: 100%; height: 100%; padding: 10px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; background: #d8d8d8; color: #1c1c1c; border-bottom: 1px solid #bfbfbf; border-left: 1px solid #bfbfbf; border-right: 1px solid #bfbfbf; text-align: left; clear: both;}
+.zhirniy {width: 100%; height: 100%; padding: 0px; margin: 5px 0px 0px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 16px;}
+.korzina_yur {display: none;}
+.cart_oform_input {width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.cart_oform_input input {font-size: 14px; font-family: 'Roboto', sans-serif; color: #1c1c1c; border: 1px solid #808080; background: #fff;}
+.cart_oform_input textarea {font-size: 14px; font-family: 'Roboto', sans-serif; color: #1c1c1c; border: 1px solid #808080; background: #fff;}
+.cart_oform_input2 {margin: 0px; padding: 0px;}
+.cart_oform_input2 input {font-size: 14px; font-family: 'Roboto', sans-serif; color: #1c1c1c;}
+
+.zakaz {padding: 0px; margin: 30px 0px 30px 0px;}
+.zakaz_button {padding: 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; color: #fff;}
+.zakaz_button a {padding: 15px 40px 15px 40px; margin: 0px; color: #fff; text-decoration: none; background: #1c1c1c;}
+.zakaz_button a:hover {color: #fff; text-decoration: none; background: #000;}
+.zakaz_button a:active {color: #fff; text-decoration: none; background: #000;}
+
+/* Корзина дополнение */
+.dopolnenie_cart {display: none;}
+
+/* Заказ отправлен */
+.cart_end {width: 500px; height: 64px; margin: 10px 0px 0px 0px; padding: 10px; background: #fff; border: 1px solid #808080; text-align: left;}
+.cart_end_icon {float: left; margin: 0px 10px 0px 0px; padding: 0px;}
+.cart_end_text {padding: 0px; margin: 5px 0px 0px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 18px; text-align: left;}
+
+/* Страница Доставка и самовывоз */
+.dostavka_name {padding: 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 18px; text-align: left;}
+.dostavka_primechanie {padding: 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 16px; text-align: left;}
+
+.dostavka_tarif {width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.dostavka_maps {float: none; width: 100%; height: 100%; padding: 0px; margin: 5px 0px 0px 0px;}
+.dostavka_price {float: none; width: 100%; height: 100%; padding: 10px; margin: 0px 0px 5px 0px; background: #fff; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 16px; text-align: left;}
+
+.razgruzka {width: 100%; padding: 0px; margin: 5px 0px 0px 0px;}
+.razgruzka table {padding: 0px; margin: 0px; background: #fff; border-top: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0;}
+.razgruzka tr {padding: 0px; margin: 0px; }
+.razgruzka td {padding: 5px; margin: 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 14px; border-bottom: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0;}
+.razgruzka_primeri {padding: 10px; margin: 10px 0px; background: #fff;}
+.razgruzka_primeri p {padding: 0px; margin: 0px 0px 10px 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 14px; text-align: left;}
+
+/* Страница Оплата */
+.oplata_white {width: 100%; height: 100%; padding: 10px; margin: 10px 0px 0px 0px; background: #fff;}
+.oplata_white_name {padding: 0px 0px 10px 0px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 18px; text-align: left;}
+.oplata_white_text {padding: 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 16px; text-align: left;}
+.oplata_white_button {padding: 0px; margin: 20px 0px 10px 0px;}
+.oplata_white_button a {padding: 10px 30px 10px 30px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-decoration: none; background: #fff; border: 1px solid #000;}
+.oplata_white_button a:hover {padding: 10px 30px 10px 30px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: none; background: #000; border: 1px solid #000;}
+.oplata_grey {width: 100%; height: 100%; padding: 10px; margin: 0px; background: #dee2e3;}
+.oplata_grey_name {padding: 0px 0px 10px 0px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; line-height: 18px; text-align: left;}
+.oplata_grey_text {padding: 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 16px; text-align: left;}
+.oplata_grey_button {padding: 0px; margin: 20px 0px 10px 0px;}
+.oplata_grey_button a {padding: 10px 30px 10px 30px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-decoration: none; background: #dee2e3; border: 1px solid #000;}
+.oplata_grey_button a:hover {padding: 10px 30px 10px 30px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: none; background: #000; border: 1px solid #000;}
+.oplata_bordo {width: 100%; height: 100%; padding: 10px; margin: 0px 0px 10px 0px; background: #fff;}
+.oplata_bordo_name {padding: 0px 0px 10px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; margin: 0px; line-height: 18px; text-align: left;}
+.oplata_bordo_text {padding: 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 16px; text-align: left;}
+.oplata_bordo_text a {color: #1c1c1c; text-decoration: underline;}
+.oplata_bordo_text a:hover {color: #1c1c1c; text-decoration: none;}
+
+/* Акции */
+.stocks {width: 100%; margin: 10px 0px; padding: 0px;}
+.stocks_left {float: none; width: 100%; height: 100%; margin: 0px; padding: 0px;}
+.stocks_photo {display: none; width: 100%; height: 0px; margin: 0px; padding: 0px; overflow: hidden; border: 1px solid #ededed; background: #f7f7f7;}
+.stocks_photo_middle {display: none; width: 100%; height: 0px; margin: 0px; padding: 0px; display: table-cell; vertical-align: middle; text-align: center;}
+.stocks_photo:hover {background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.3);}
+.stocks_photo img {max-width: 100%; min-height: 200px;}
+.stocks_right {float: none; width: 100%; margin: 0px; padding: 0px;}
+.stocks_name {width: 100%; height: 100%; margin: 0px; padding: 10px 0px 10px 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.stocks_date {width: 100%; height: 20px; padding: 0px 0px 0px 25px; margin: 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left; line-height: 18px; background: url(../images/calendar.svg) left center no-repeat;}
+.stocks_text {padding: 10px 0px 10px 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px;}
+.stocks_text a {color: #1c1c1c; text-decoration: underline;}
+.stocks_text a:hover {color: #1c1c1c; text-decoration: none;}
+.stocks_primechanie {padding: 0px; margin: 0px 0px 20px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.stocks_collection_text {float: left; width: 50%; margin: 0px; padding: 0px;}
+.stocks_collection_text a {margin: 0px; padding: 10px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-decoration: none; border-left: 3px solid #000; background: #fff; border-bottom: none; text-align: left; }
+.stocks_collection_text a:hover {margin: 0px; padding: 10px; color: #1c1c1c; text-decoration: none; border-left: 3px solid #000; background: #fff; border-bottom: none;}
+
+.stocks_text {padding: 20px; margin: 10px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 16px; text-align: left; background: #fcfcfc; border-bottom: 1px solid #ededed;}
+
+.filters_text {padding: 20px; margin: 10px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 16px; text-align: left; background: #fcfcfc; border-bottom: 1px solid #ededed;}
+
+/* Страница Производители */
+.brand_group {width: 100%; height: 100%; margin: 0px 0px 20px 0px; padding: 10px 0px 0px 0px; border-bottom: 1px solid #d9d9d9;}
+.brand_flag {float: left; width: 18px; height: 12px; margin: 2px 5px 2px 0px; padding: 0px;}
+.brand_country {margin: 0px; padding: 0px 0px 10px 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.brand_zagolovok {display: none; margin: 10px 0px 10px 0px; padding: 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.brand_name {float: left; width: 100%; margin: 0px; padding: 0px;}
+.brand_name a {margin: 0px; padding: 10px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-decoration: none; border-left: 3px solid #000; background: #fff; text-align: left; border-bottom: none;}
+.brand_name a:hover {margin: 0px; padding: 10px; color: #1c1c1c; text-decoration: none; border-left: 3px solid #000; background: #fff; border-bottom: none;}
+.brand_name span {margin: 0px 0px 0px 3px; padding: 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left; line-height: 18px;}
+.brand_button_group {display: none;}
+
+/* Страница 3D раскладка */
+.proekt_name {padding: 5px 0px 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 24px;}
+.proekt_text {font-size: 13px; font-family: 'Roboto', sans-serif; color: #1c1c1c; padding: 0px; margin: 0px 0px 10px 0px; line-height: 18px;}
+
+.proekt_anketa {width: 100%; padding: 20px; margin: 0px 0px 10px 0px; background: #f5fcfa; border: 1px solid #15b075;}
+.proekt_anketa_name {padding: 5px 0px 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #000; text-align: left; line-height: 16px;}
+.proekt_anketa_icon {float: left; padding: 0px; margin: 0px 20px 0px 0px;}
+.proekt_anketa_icon img {width: 24px; height: 24px;}
+.proekt_anketa_text {padding: 5px 0px 10px 0px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left;}
+.proekt_anketa_text span {font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left;}
+.proekt_anketa_text a {color: #1c1c1c; text-decoration: underline;}
+.proekt_anketa_text a:hover {color: #1c1c1c; text-decoration: none;}
+
+.raskladka_zagolovok {padding: 5px 0px 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 24px;}
+.raskladka {width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.raskladka_box {width: 100%; height: 100%; margin: 0px 0px 10px 0px; padding: 10px; border: 1px solid #d9d9d9; background: #fff;}
+.raskladka_info {width: 100%; height: 100%; margin: 0px; padding: 0px; background: #fff;}
+.raskladka_name {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; padding: 0px; margin: 0px 0px 10px 0px; line-height: 18px;}
+.raskladka_name a {color: #1c1c1c; text-decoration: underline;}
+.raskladka_name a:hover {color: #1c1c1c; text-decoration: none;}
+.raskladka_zavod {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 0px; margin: 0px 0px 10px 0px; line-height: 18px;}
+.raskladka_zavod a {color: #1c1c1c; text-decoration: underline;}
+.raskladka_zavod a:hover {color: #1c1c1c; text-decoration: none;}
+.raskladka_name2 {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 0px; margin: 0px 0px 10px 0px; line-height: 18px;}
+.raskladka_name2 a {color: #1c1c1c; text-decoration: underline;}
+.raskladka_name2 a:hover {color: #1c1c1c; text-decoration: none;}
+.raskladka_programma {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 0px; margin: 0px 0px 10px 0px; line-height: 18px;}
+.raskladka_programma span {border-bottom: 1px dotted #1c1c1c;}
+.raskladka_programma a {color: #1c1c1c; text-decoration: underline;}
+.raskladka_programma a:hover {color: #1c1c1c; text-decoration: none;}
+.raskladka_foto_group {width: 100%; height: 100%; padding: 0px; margin: 0px; background: #fff;}
+.raskladka_foto {float: left; width: 64px; height: 64px; padding: 0px; margin: 0px 5px 0px 0px; background: #f7f7f7; overflow: hidden; border: none;}
+.raskladka_foto_middle {width: 64px; height: 64px; margin: 0px; padding: 0px; display: table-cell; vertical-align: middle; text-align: center;}
+.raskladka_foto img {max-width: 64px; max-height: 64px;}
+.raskladka_foto_all {width: 64px; height: 64px; padding: 0px; margin: 0px;}
+.raskladka_foto_all a {width: 64px; height: 64px; padding: 22px 0px 0px 0px; margin: 0px; font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-align: center; text-decoration: none; background: #000; opacity: 0.9; vertical-align: middle;}
+.raskladka_foto_all a:hover {color: #fff; text-decoration: none; background: #000; opacity: 0.2;}
+.raskladka_price {font-size: 13px; font-family: 'Roboto', sans-serif; color: #1c1c1c; padding: 0px; margin: 0px 0px 10px 0px; line-height: 18px;}
+.raskladka_price span {font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; padding: 0px; margin: 0px 0px 10px 0px; line-height: 18px;}
+.raskladka_price a {color: #1c1c1c; text-decoration: underline;}
+.raskladka_price a:hover {color: #1c1c1c; text-decoration: none;}
+
+/* 3D в коллекции */
+.raskladka_collections_group {width: 100%; height: 100%; display: inline-block; margin: 0px; padding: 5px; background: #fff; border: 1px solid #f7f7f7;}
+.raskladka_collections {float: left; width: 60px; height: 60px; padding: 0px; margin: 0px 5px 5px 0px; border: 1px solid #ededed; background: #f7f7f7; overflow: hidden;}
+.raskladka_collections_middle {width: 60px; height: 60px; margin: 0px; padding: 0px; display: table-cell; vertical-align: middle; text-align: center;}
+.raskladka_collections img {max-width: 60px; max-height: 60px;}
+
+/* Живое фото в коллекции */
+.livephoto_collections_group {width: 100%; height: 100%; display: inline-block; margin: 0px; padding: 5px; background: #fff; border: 1px solid #f7f7f7;}
+.livephoto_collections {float: left; width: 60px; height: 60px; padding: 0px; margin: 0px 5px 5px 0px; border: 1px solid #ededed; background: #f7f7f7; overflow: hidden;}
+.livephoto_collections_middle {width: 60px; height: 60px; margin: 0px; padding: 0px; display: table-cell; vertical-align: middle; text-align: center;}
+.livephoto_collections img {max-width: 60px; max-height: 60px;}
+
+/* Страница Контакты */
+.contacts_button_group {width: 100%; height: 100%; padding: 0px; margin: 0px;}
+.contacts_button {width: 100%; height: 100%; padding: 0px; margin: 0px 0px 5px 0px; border: none; background: none;}
+.contacts_button a {padding: 0px 0px 0px 20px; margin: 0px; color: #1c1c1c; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: left; line-height: 14px; text-decoration: none; border: none; background: url(../images/link.svg) no-repeat;}
+.contacts_button a:hover {padding: 0px 0px 0px 20px; margin: 0px; color: #1c1c1c; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: left; line-height: 14px; text-decoration: none; border: none; background: url(../images/link.svg) no-repeat;}
+.contacts_button span {border-bottom: 1px dotted #1c1c1c;}
+.contacts_button span:hover {border-bottom: 0px dotted #1c1c1c;}
+.contacts_name {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; padding: 0px 0px 10px 0px; margin: 0px; line-height: 16px; text-align: left;}
+.contacts_text {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 0px 0px 10px 0px; margin: 0px; line-height: 16px; text-align: left;}
+
+.contacts_white {width: 100%; height: 100%; padding: 10px; margin: 0px 0px 10px 0px; background: #fff;}
+.contacts_white_name {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; padding: 10px 0px 10px 0px; margin: 0px; line-height: 16px; text-align: left;}
+.contacts_white_text {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 0px; margin: 0px; line-height: 16px; text-align: left;}
+.contacts_white_text a {color: #1c1c1c; text-decoration: underline;}
+.contacts_white_text a:hover {color: #1c1c1c; text-decoration: none;}
+.contacts_white_text span {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 0px; margin: 0px; line-height: 16px; text-align: left;}
+.contacts_white_text span a {color: #1c1c1c; text-decoration: none;}
+.contacts_white_text span a:hover {color: #1c1c1c; text-decoration: none;}
+.contacts_white_marshrut {padding: 0px; margin: 5px 0px 20px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; line-height: 16px; text-align: left;}
+.contacts_white_marshrut a {padding: 5px 10px; margin: 0px; color: #1c1c1c; background: #fff; border: 1px solid #1c1c1c; text-decoration: none;}
+.contacts_white_marshrut a:hover {padding: 5px 10px; margin: 0px; color: #fff; background: #000; border: 1px solid #000; text-decoration: none;}
+.whatsapp a {color: #1c1c1c; text-decoration: none; border-bottom: 1px solid #c0c0c0;}
+.whatsapp a:hover {color: #1c1c1c; text-decoration: none; border-bottom: 0px solid #c0c0c0;}
+.viber a {color: #1c1c1c; text-decoration: none; border-bottom: 1px solid #c0c0c0;}
+.viber a:hover {color: #1c1c1c; text-decoration: none; border-bottom: 0px solid #c0c0c0;}
+.telegram a {color: #1c1c1c; text-decoration: none; border-bottom: 1px solid #c0c0c0;}
+.telegram a:hover {color: #1c1c1c; text-decoration: none; border-bottom: 0px solid #c0c0c0;}
+.contacts_white_button {padding: 0px; margin: 10px 0px 10px 0px;}
+.contacts_white_button a {padding: 10px 30px 10px 30px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-decoration: none; background: #fff; border: 1px solid #000;}
+.contacts_white_button a:hover {padding: 10px 30px 10px 30px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: none; background: #000; border: 1px solid #000;}
+.contacts_white_foto_group {width: 100%; height: 64px; background: #fff;}
+.contacts_white_foto {float: left; width: 64px; height: 64px; padding: 0px; margin: 0px 5px 0px 0px; background: #f7f7f7; overflow: hidden; border: none;}
+.contacts_white_foto img {width: 64px; height: 64px; border: none;}
+.contacts_white_foto_all {width: 64px; height: 64px; padding: 0px; margin: 0px;}
+.contacts_white_foto_all a {width: 64px; height: 64px; padding: 22px 0px 0px 0px; margin: 0px; font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-align: center; text-decoration: none; background: #000; opacity: 0.9; vertical-align: middle;}
+.contacts_white_foto_all a:hover {color: #fff; text-decoration: none; background: #000; opacity: 0.2;}
+.contacts_grey {width: 100%; height: 600px; margin: 0px auto; background: #dee2e3;}
+
+/* Офис */
+.contacts_office_white {width: 100%; padding: 10px 0px; margin: 0px;}
+.contacts_line {width: 100%; padding: 0px; margin: 0px; border-top: 1px solid #d9d9d9;}
+.contacts_office_white_left {width: 100%; padding: 0px; margin: 0px;}
+.contacts_office_white_right {width: 100%; padding: 0px; margin: 0px;}
+.contacts_office_white_name {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; padding: 10px 0px 10px 0px; margin: 0px; line-height: 16px; text-align: left;}
+.contacts_office_white_text {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 0px; margin: 0px; line-height: 16px; text-align: left;}
+.contacts_office_white_text a {color: #1c1c1c; text-decoration: underline;}
+.contacts_office_white_text a:hover {color: #1c1c1c; text-decoration: none;}
+.contacts_office_white_text span {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 0px; margin: 0px; line-height: 16px; text-align: left;}
+.contacts_office_white_text span a {color: #1c1c1c; text-decoration: none;}
+.contacts_office_white_text span a:hover {color: #1c1c1c; text-decoration: none;}
+.contacts_office_white_marshrut {font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; padding: 10px 0px 10px 0px; margin: 0px; line-height: 20px; text-align: left;}
+.contacts_office_white_marshrut a {color: #1c1c1c; text-decoration: underline;}
+.contacts_office_white_marshrut a:hover {color: #1c1c1c; text-decoration: none;}
+.contacts_office_button {margin: 10px 0px 10px 0px; padding: 0px;}
+.contacts_office_button_text {padding: 0px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; text-align: center; color: #fff;}
+.contacts_office_button_text a {display: block; width: 180px; height: 100%; padding: 10px 0px 10px 0px; margin: 0px; color: #fff; text-decoration: none; background: #1c1c1c;}
+.contacts_office_button_text a:hover {color: #fff; text-decoration: none; background: #000;}
+
+/* Реквизиты */
+.contacts_download {width: 100%; height: 100%; padding: 0px 0px 20px 0px; margin: 0px;}
+.contacts_download_icon {float: left; padding: 0px; margin: 0px 10px 0px 0px;}
+.contacts_download_icon img {width: 24px; height: 24px;}
+.contacts_download_text {padding: 0px; margin: 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left;}
+.contacts_download_text span {font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left;}
+.contacts_download_text a {color: #1c1c1c; text-decoration: underline;}
+.contacts_download_text a:hover {color: #1c1c1c; text-decoration: none;}
+
+.contacts_rekvizity {width: 100%; padding: 10px; margin: 0px 0px 10px 0px; border: 3px solid #808080; background: #fff;}
+.contacts_rekvizity_name {width: 100%; height: 30px; padding: 0px; margin: 0px 0px 10px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #808080; text-align: center; text-transform: uppercase; background: #fff;}
+.contacts_rekvizity_group {width: 100%; height: 80px; padding: 0px; margin: 0px 0px 10px 0px; border-bottom: 1px solid #d9d9d9;}
+.contacts_rekvizity_group_left {float: left; width: 30%; padding: 0px; margin: 0px; background: #fff;}
+.contacts_rekvizity_group_left_name {float: left; padding: 0px; margin: 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 19px; background: #fff;}
+.contacts_rekvizity_group_right {float: right; width: 60%; padding: 0px; font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px; background: #fff;}
+.contacts_rekvizity_group_right span {font-size: 12px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #808080; text-align: left;}
+.contacts_rekvizity_group_right a {color: #1c1c1c; text-decoration: none;}
+.contacts_rekvizity_group_right a:hover {color: #1c1c1c; text-decoration: none;}
+
+/* Подвал сайта */
+.footer {width: 100%; height: 100%; margin: 0px; background: #1c1c1c;}
+.footer_menu {width: 100%; height: 100%; margin: 0px; padding: 10px; background: #1c1c1c;}
+
+.footer_1 {float: none; width: 100%; height: 100%; margin: 10px 0px 0px 0px; padding: 0px; text-align: center;}
+.footer_1_text {font-size: 14px; font-family: 'Roboto', sans-serif; color: #a6a6a6; padding: 5px 0px 5px 0px; margin: 0px; line-height: 14px;}
+.footer_1_text a {color: #bdbdbd; text-decoration: none;}
+.footer_1_text a:hover {color: #fff; text-decoration: underline;}
+.footer_1_text_bg {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; padding: 0px 0px 5px 0px; margin: 0px; line-height: 14px;}
+.footer_1_text_bg a {color: #fff; text-decoration: none;}
+.footer_1_text_bg a:hover {color: #fff; text-decoration: underline;}
+
+.footer_2 {float: none; width: 100%; height: 100%; margin: 0px; padding: 10px 0px 0px 0px; text-align: center;}
+.footer_2_text {font-size: 14px; font-family: 'Roboto', sans-serif; color: #a6a6a6; padding: 5px 0px 5px 0px; margin: 0px; line-height: 14px;}
+.footer_2_text a {color: #bdbdbd; text-decoration: none;}
+.footer_2_text a:hover {color: #fff; text-decoration: underline;}
+.footer_2_text_bg {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; padding: 0px 0px 5px 0px; margin: 0px; line-height: 14px;}
+.footer_2_text_bg a {color: #fff; text-decoration: none;}
+.footer_2_text_bg a:hover {color: #fff; text-decoration: underline;}
+
+.footer_3 {float: none; width: 100%; height: 100%; margin: 0px; padding: 10px 0px 0px 0px; text-align: center;}
+.footer_3_text {font-size: 14px; font-family: 'Roboto', sans-serif; color: #a6a6a6; padding: 5px 0px 5px 0px; margin: 0px; line-height: 14px;}
+.footer_3_text a {color: #bdbdbd; text-decoration: none;}
+.footer_3_text a:hover {color: #fff; text-decoration: underline;}
+.footer_3_text_bg {font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; padding: 0px 0px 5px 0px; margin: 0px; line-height: 14px;}
+.footer_3_text_bg a {color: #fff; text-decoration: none;}
+.footer_3_text_bg a:hover {color: #fff; text-decoration: underline;}
+
+.footer_4 {float: none; width: 100%; height: 100%; margin: 10px 0px 0px 0px; padding: 0px; text-align: center; border-top: 1px solid #474747;}
+.footer_4_text {width: 100%; font-size: 14px; font-family: 'Roboto', sans-serif; color: #a6a6a6; padding: 5px 0px 5px 0px; margin: 0px; line-height: 14px;}
+.footer_4_text a {width: 100%; display: block; color: #bdbdbd; text-decoration: none;}
+.footer_4_text a:hover {color: #fff; text-decoration: underline;}
+.footer_4_text_bg {width: 100%; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; padding: 25px 0px 10px 0px; margin: 0px; line-height: 18px;}
+.footer_4_text_bg a {color: #fff; text-decoration: none;}
+.footer_4_text_bg a:hover {color: #fff; text-decoration: underline;}
+
+.footer2 {width: 100%; height: 100%; margin: 0px; padding: 10px; background: #1c1c1c; border-top: 1px solid #474747;}
+.footer2_text {float: none; width: 100%; height: 100%; padding: 10px 0px 0px 0px; font-size: 14px; font-family: 'Roboto', sans-serif; color: #a6a6a6; text-align: center; line-height: 14px;}
+.footer2_text a {color: #fff; text-decoration: none;}
+.footer2_text a:hover {color: #fff; text-decoration: underline;}
+.footer2_social {float: none; width: 100%; height: 100%; padding: 10px 0px 0px 0px; text-align: center;}
+.footer2_social img {margin-left: 25px;}
+
+/* Страница Магазина */
+.magazin_info {clear: both; display: inline-block; width: 100%; height: 100%; margin: 0px auto; padding: 10px 0px; background: #242424;}
+.magazin_info_fon {width: 90%; height: 100%; margin: 0px auto; padding: 0px; background: #242424;}
+.magazin_info_group {width: 100%; height: 100%; margin: 0px; padding: 0px; background: #242424;}
+.magazin_info_metro {padding: 0px 0px 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #fff; text-align: left; line-height: 18px;}
+.magazin_info_foto {width: 300px; height: 100%; padding: 0px; margin: 0px;}
+.magazin_info_foto img {width: 300px;}
+.magazin_info_adres {padding: 0px; margin: 10px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-align: left; line-height: 14px;}
+.magazin_info_map {padding: 0px; margin: 10px 0px 0px 0px;}
+.magazin_info_map a {width: 170px; height: 100%; display: block; padding: 10px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: none; text-align: center; background: #000;}
+.magazin_info_map a:hover {color: #fff; text-decoration: none;}
+.magazin_contacts {width: 100%; height: 100%; padding: 10px 10px 0px 10px; margin: 10px 0px 10px 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 14px; background: #fff;}
+.magazin_contacts_zagolovok {padding: 0px 0px 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.magazin_contacts_phone {padding: 0px; margin: 0px; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px;}
+.magazin_contacts_phone a {color: #1c1c1c; text-decoration: none;}
+.magazin_contacts_phone a:hover {color: #1c1c1c; text-decoration: none;}
+.magazin_contacts_social {padding: 5px 0px 10px 0px; margin: 0px;}
+.magazin_contacts_mail {padding: 0px 0px 10px 0px; margin: 0px;}
+.magazin_contacts_mail a {color: #1c1c1c; text-decoration: underline;}
+.magazin_contacts_mail a:hover {color: #1c1c1c; text-decoration: none;}
+.magazin_contacts_graffic {padding: 10px 0px 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px; border-top: 1px solid #dedede;}
+.magazin_contacts_graffic_group {width: 100%; height: 20px; padding: 0px; margin: 0px 0px 10px 0px;font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 16px; }
+.magazin_contacts_graffic_text {float: left; width: 30%; height: 20px; padding: 0px; margin: 0px; border-right: 1px solid #dedede;}
+.magazin_contacts_graffic_time {float: right; width: 60%; height: 20px; padding: 0px; margin: 0px;}
+
+.magazin_brand {clear: both; width: 100%; height: 100%; margin: 0px auto; padding: 0px;}
+.magazin_brand_fon {width: 90%; height: 100%; margin: 0px auto; padding: 0px;}
+.magazin_brand_zagolovok {padding: 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #000; text-align: left; line-height: 18px;}
+.magazin_brand_one {float: left; width: 150px; height: 100%; padding: 0px; margin: 5px 10px 5px 0px;}
+.magazin_brand_one img {width: 150px;}
+.magazin_brand_one2 {float: left; width: 150px; height: 100%; padding: 0px; margin: 5px 10px 5px 0px;}
+.magazin_brand_one2 img {width: 150px;}
+
+.magazin_foto {clear: both; display: inline-block; width: 100%; height: 100%; margin: 0px auto; padding: 0px 0px 15px 0px; background: #242424;}
+.magazin_foto_fon {width: 90%; height: 100%; margin: 0px auto; padding: 0px;}
+.magazin_foto_zagolovok {padding: 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #fff; text-align: left; line-height: 18px;}
+.magazin_foto_one {float: left; width: 150px; height: 100px; padding: 0px; margin: 0px;}
+.magazin_foto_one img {width: 150px; height: 100px;}
+.magazin_foto_one2 {float: left; width: 150px; height: 100px; padding: 0px; margin: 0px 10px 0px 0px;}
+.magazin_foto_one2 img {width: 150px; height: 100px;}
+.magazin_foto_all {position: absolute; padding: 0px; margin: 0px;}
+.magazin_foto_all a {width: 150px; height: 100px; display: block; padding: 40px 0px 0px 0px; margin: 0px; font-size: 30px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: none; text-align: center; background: #000; opacity: 0.9;}
+.magazin_foto_all a:hover {color: #fff; text-decoration: none; opacity: 0.2;}
+
+.magazin_bonus {clear: both; width: 100%; height: 100%; margin: 0px auto; padding: 0px;}
+.magazin_bonus_fon {width: 90%; height: 100%; margin: 0px auto; padding: 0px;}
+.magazin_bonus_zagolovok {padding: 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #000; text-align: left; line-height: 18px;}
+.magazin_bonus_one {width: 100%; height: 100%; padding: 0px 0px 10px 0px; margin: 0px;}
+.magazin_bonus_one2 {width: 100%; height: 100%; padding: 0px 0px 10px 0px; margin: 0px;}
+.magazin_bonus_one_icon {float: left; width: 70px; height: 70px; padding: 0px 10px 10px 0px; margin: 0px;}
+.magazin_bonus_one_icon img {width: 50px; height: 50px;}
+.magazin_bonus_one_zagolovok {padding: 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #1c1c1c; text-align: left; line-height: 18px;}
+.magazin_bonus_one_text {padding: 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 14px;}
+
+.magazin_3d {clear: both; display: inline-block; width: 100%; height: 100%; margin: 0px auto; padding: 0px 0px 10px 0px; background: #242424;}
+.magazin_3d_fon {width: 90%; height: 100%; margin: 0px auto; padding: 0px;}
+.magazin_3d_zagolovok {padding: 10px 0px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #fff; text-align: left; line-height: 18px;}
+.magazin_3d_zagolovok span {padding: 0px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-align: left; line-height: 14px;}
+.magazin_3d_one {width: 100%; height: 100%; padding: 0px 0px 10px 0px; margin: 0px;}
+.magazin_3d_one2 {width: 100%; height: 100%; padding: 0px 0px 10px 0px; margin: 0px;}
+.magazin_3d_one_icon {width: 300px; height: 300px; padding: 0px; margin: 0px auto; overflow: hidden;}
+.magazin_3d_one_icon img {min-width: 300px; max-height: 300px;}
+.magazin_3d_one_zagolovok {position: absolute; width: 300px; height: 50px; padding: 10px; margin-top: 250px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-align: left; line-height: 14px; background: #000; opacity: 0.6;}
+.magazin_3d_one_zagolovok:hover {opacity: 1;}
+.magazin_3d_one_zagolovok a {color: #fff; text-decoration: underline;}
+.magazin_3d_one_zagolovok a:hover {color: #fff; text-decoration: none;}
+.magazin_3d_all {width: 300px; height: 300px; padding: 0px; margin: 0px auto; background: #2b2b2b;}
+.magazin_3d_all_zagolovok {padding: 30px 20px 50px 20px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-align: center; line-height: 18px;}
+.magazin_3d_all_text {padding: 20px 20px 60px 20px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-align: center; line-height: 14px;}
+.magazin_3d_all_button {padding: 0px; margin: 0px;}
+.magazin_3d_all_button a {width: 200px; height: 100%; display: block; padding: 10px; margin: 0px auto; font-size: 14px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #fff; text-decoration: none; text-align: center; background: #000;}
+.magazin_3d_all_button a:hover {color: #fff; text-decoration: none;}
+
+.magazin_collection {clear: both; width: 100%; height: 100%; margin: 0px; padding: 0px;}
+.magazin_collection_fon {width: 100%; height: 100%; margin: 0px; padding: 0px;}
+.magazin_collection_zagolovok {padding: 10px; margin: 0px; font-size: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #000; text-align: left; line-height: 18px;}
+.magazin_collection_text {padding: 10px; margin: 0px; font-size: 13px; font-family: 'Roboto', sans-serif; font-weight: normal; color: #1c1c1c; text-align: left; line-height: 18px;}
+
+.foto_magazin {width: 100%; padding: 0px 0px 5px 0px;}
+.foto_magazin img {width: 100%;}
+.foto_magazin2 {float: none; width: 100%; margin: 0px; padding: 0px 0px 5px 0px;}
+.foto_magazin2 img {width: 100%;}
+.foto_magazin3 {float: none; width: 100%; padding: 0px 0px 5px 0px;}
+.foto_magazin3 img {width: 100%;}
+
+.foto_magazin_full {width: 100%; padding: 0px 0px 5px 0px;}
+.foto_magazin_full img {width: 100%;}
+.foto_magazin2_full {float: none; width: 100%; margin: 0px; padding: 0px 0px 5px 0px;}
+.foto_magazin2_full img {width: 100%;}
+.foto_magazin3_full {float: none; width: 100%; padding: 0px 0px 5px 0px;}
+.foto_magazin3_full img {width: 100%;}
+
+
+/* Отзывы */
+.otzyvy {width: 100%; margin: 0px; padding: 0px 0px 10px 0px;}
+.otzyvy_konstruktor {float: none; width: 100%; height: 100%; margin: 0px 0px 10px 0px; padding: 0px;}
+.otzyvy_melnica {float: none; width: 100%; height: 100%; margin: 0px 0px 10px 0px; padding: 0px;}
+.otzyvy_office {float: none; width: 100%; height: 100%; margin: 0px 0px 10px 0px; padding: 0px;}
+.otzyvy_magazin_zagolovok {margin: 0px 0px 10px 0px; padding: 0px; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #000; text-decoration: none; text-align: left; line-height: 24px;}
+.otzyvy_magazin_pole {width: 100%; height: 1000px; overflow: hidden; position: relative;}
+
+/* Таблица Marble Mosaic */
+.marble-mosaic {}
+.marble-mosaic table {}
+.marble-mosaic tr {}
+.marble-mosaic th {border-bottom: 2px solid #000;}
+.marble-mosaic td {border-bottom: 1px solid #c0c0c0;}
+}
